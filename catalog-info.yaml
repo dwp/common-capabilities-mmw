@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: common.capabilities.mmw
-  title: Common-Capabilities-Mmw
+  title: Common-Capabilities-MMW
   description: |
    prototype
 
