@@ -4,7 +4,7 @@ metadata:
   name: common.capabilities.mmw
   title: Common-Capabilities-MMW
   description: |
-   prototype
+   prototype for manage my work part of DWP Task
 
   annotations:
     gitlab.com/project-slug: dwp/user-centred-design/common-capabilities-mmw
@@ -13,7 +13,7 @@ metadata:
     dwp.gov.uk/version: 1.0.0
     dwp.gov.uk/license: unknown
 
-    dwp.gov.uk/last-verified.by: Ben Raine
+    dwp.gov.uk/last-verified.by: Ash Henry
     dwp.gov.uk/last-verified.on: 2026-03-03
 
     dwp.gov.uk/open-source.approved: "true"
