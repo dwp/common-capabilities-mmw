@@ -1,0 +1,154 @@
+{% extends "layouts/mmw-1.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      Select task(s) to add to case: [CASE REF]
+    </h1>
+    <p>Explainer here.</p>
+    <table class="govuk-table" data-module="moj-multi-select" data-id-prefix="mountains-">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col" id="mountains-select-all"></th>
+          <th class="govuk-table__header" scope="col">Details</th>
+          <th class="govuk-table__header" scope="col">Created</th>
+          <th class="govuk-table__header" scope="col">Task</th>
+          <th class="govuk-table__header " scope="col">Customer</th>
+          <th class="govuk-table__header" scope="col">National insurance number</th>
+          <th class="govuk-table__header" scope="col">Due</th>
+          <th class="govuk-table__header" scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row govuk-table__row--selected">
+          <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+              <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+              <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                <span class="govuk-visually-hidden">Select Aconcagua</span>
+              </label>
+            </div>
+          </td>
+          <td class="govuk-table__cell">Initial contact</td>
+          <td class="govuk-table__cell">12th Jan 2026</td>
+          <td class="govuk-table__cell">Initial response</td>
+          <td class="govuk-table__cell">Jane Farley</td>
+          <td class="govuk-table__cell">RT567898F</td>
+          <td class="govuk-table__cell">12th Mar 2026</td>
+          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--red">Overdue</span></td>
+        </tr>
+        <tr class="govuk-table__row govuk-table__row--selected">
+          <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+              <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+              <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                <span class="govuk-visually-hidden">Select Aconcagua</span>
+              </label>
+            </div>
+          </td>
+          <td class="govuk-table__cell">Initial contact</td>
+          <td class="govuk-table__cell">14th Feb 2026</td>
+          <td class="govuk-table__cell">Initial response</td>
+          <td class="govuk-table__cell">Peter Duncan</td>
+          <td class="govuk-table__cell">WW234376D</td>
+          <td class="govuk-table__cell">14th Mar 2026</td>
+          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--yellow">On hold</span></td>
+        </tr>
+        <tr class="govuk-table__row govuk-table__row--selected">
+          <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+              <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+              <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                <span class="govuk-visually-hidden">Select Aconcagua</span>
+              </label>
+            </div>
+          </td>
+          <td class="govuk-table__cell">Second contact</td>
+          <td class="govuk-table__cell">12th Jan 2026</td>
+          <td class="govuk-table__cell">Initial response</td>
+          <td class="govuk-table__cell">Jane Farley</td>
+          <td class="govuk-table__cell">RT567898F</td>
+          <td class="govuk-table__cell">12th Mar 2026</td>
+          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">closed</span></td>
+        </tr>
+        <tr class="govuk-table__row govuk-table__row--selected">
+          <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+              <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+              <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                <span class="govuk-visually-hidden">Select Aconcagua</span>
+              </label>
+            </div>
+          </td>
+          <td class="govuk-table__cell">Initial contact</td>
+          <td class="govuk-table__cell">10th Mar 2026</td>
+          <td class="govuk-table__cell">Initial response</td>
+          <td class="govuk-table__cell">Jacob Crown</td>
+          <td class="govuk-table__cell">MM896423E</td>
+          <td class="govuk-table__cell">10th Apr 2026</td>
+          <td class="govuk-table__cell"><span class="govuk-tag">Active</span></td>
+        </tr>
+        <tr class="govuk-table__row govuk-table__row--selected">
+          <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+              <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+              <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                <span class="govuk-visually-hidden">Select Aconcagua</span>
+              </label>
+            </div>
+          </td>
+          <td class="govuk-table__cell">Initial contact</td>
+          <td class="govuk-table__cell">9th Mar 2026</td>
+          <td class="govuk-table__cell">Initial response</td>
+          <td class="govuk-table__cell">Terry Bailey</td>
+          <td class="govuk-table__cell">GG227645D</td>
+          <td class="govuk-table__cell">12th Apr 2026</td>
+          <td class="govuk-table__cell"><span class="govuk-tag">Active</span></td>
+        </tr>
+        <tr class="govuk-table__row govuk-table__row--selected">
+          <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+              <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+              <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                <span class="govuk-visually-hidden">Select Aconcagua</span>
+              </label>
+            </div>
+          </td>
+          <td class="govuk-table__cell">Response</td>
+          <td class="govuk-table__cell">12th Mar 2026</td>
+          <td class="govuk-table__cell">Final response</td>
+          <td class="govuk-table__cell">Derrick Francis</td>
+          <td class="govuk-table__cell">GT896531F</td>
+          <td class="govuk-table__cell">19th Mar 2026</td>
+          <td class="govuk-table__cell"><span class="govuk-tag">Active</span></td>
+        </tr>
+       
+      </tbody>
+    </table>
+    <div class="govuk-button-group govuk-!-static-padding-top-5">
+      <a type="submit" class="govuk-button" href="">
+        Confirm
+      </a>
+      <a type="submit" class="govuk-button govuk-button--secondary" href="">
+        cancel
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<!-- 
+    {% include "govuk-prototype-kit/includes/homepage-top.njk" %} -->
+
+   
+   
+
+    <!-- {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %} -->
+  </div>
+</div>
+
+{% endblock %}

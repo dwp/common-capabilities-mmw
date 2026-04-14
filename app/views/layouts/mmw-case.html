@@ -1,0 +1,84 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+{% from "internal-service-header/macro.njk" import dwpHeader %}
+{% from "internal-service-footer/macro.njk" import dwpFooter %}
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true,
+            navigation: {
+              items: [
+                  {
+                      href: "my-cases",
+                      text: "My Cases"
+                  },
+                  {
+                      href: "my-tasks",
+                      text: "My tasks"
+                  },
+                  {
+                      href: "find-a-case",
+                      text: "Find a case"
+                  },
+                  {
+                      href: "create-a-case",
+                      text: "Create a case"
+                  },
+                  {
+                      href: "#",
+                      text: "Admin"
+                  }
+              ]
+          }  
+    })
+}}
+
+<section class="dwp-quick-reference dwp-quick-reference--alternative govuk-!-static-margin-top-0" aria-label="Case information">
+    <div class="govuk-width-container">
+        <dl>
+            <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+            <dd class="dwp-quick-reference__primary">Jane Doe</dd>
+            <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary">National Insurance number:</dt>
+            <dd class="dwp-quick-reference__secondary">QQ 12 34 56 X</dd>
+            <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+            <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary">Case type:</dt>
+            <dd class="dwp-quick-reference__secondary">Initial claim for [Parameter]</dd>
+        </dl>
+    </div>
+   
+</section>
+{% endblock %}
+
+{% block footer %}
+{{
+    dwpFooter({
+        meta: {
+            visuallyHiddenTitle: "About this website",
+            items: [
+            {
+                href: "",
+                text: "Accessibility statement"
+            },
+            {
+                href: "",
+                text: "Privacy"
+            },
+            {
+                href: "/manage-prototype/clear-data",
+                text: "Clear data"
+              }
+            ]
+        }
+    }) 
+}}
+{% endblock %}
+
+
+

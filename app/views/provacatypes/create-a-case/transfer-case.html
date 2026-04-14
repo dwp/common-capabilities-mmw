@@ -1,0 +1,50 @@
+{% extends "layouts/mmw-1.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<!-- 
+    {% include "govuk-prototype-kit/includes/homepage-top.njk" %} -->
+
+   
+     
+ 
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="location">
+          Select Team
+        </label>
+        <div id="location-hint" class="govuk-hint">
+          This can be different to where you went before
+        </div>
+        <select class="govuk-select" id="location" name="location" aria-describedby="location-hint">
+          <option value="choose" selected>Choose location</option>
+          <option value="eastmidlands">East Midlands</option>
+          <option value="eastofengland">East of England</option>
+          <option value="london">London</option>
+          <option value="northeast">North East</option>
+          <option value="northwest">North West</option>
+          <option value="southeast">South East</option>
+          <option value="southwest">South West</option>
+          <option value="westmidlands">West Midlands</option>
+          <option value="yorkshire">Yorkshire and the Humber</option>
+        </select>
+      </div>
+      <div class="govuk-button-group govuk-!-static-padding-top-5">
+        <a type="submit" class="govuk-button" href="create-a-case/add-customer">
+          Save and continue
+        </a>
+        <a type="submit" class="govuk-button govuk-button--secondary" href="">
+          Save as draft
+        </a>
+      </div>
+    </div>
+
+    <!-- {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %} -->
+  </div>
+</div>
+
+{% endblock %}

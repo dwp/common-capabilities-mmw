@@ -1,0 +1,160 @@
+{% extends "layouts/mmw-1.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<!-- 
+    {% include "govuk-prototype-kit/includes/homepage-top.njk" %} -->
+
+    <div class="govuk-width-container">
+      <a href="#" class="govuk-back-link">Back</a>
+      <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+          <div class="">
+            <h1 class="govuk-heading-l">Check case details</h1>
+            <h2 class="govuk-heading-m">Case details</h2>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Case Reference number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  4444444444
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Date of receipt
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  5 January 1978
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Date of claim
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  5 January 1978
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  National Insurance numbers
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  QQ789867C <br> JJ775534F
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> customer reference</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Case type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Initial claim
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> customer reference</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  72 Guild Street<br>London<br>SE23 6FH
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Customer details
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">07700 900457</p>
+                  <p class="govuk-body">sarah.phillips@example.com</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+                </dd>
+              </div>
+            </dl>
+            <h2 class="govuk-heading-m">Customer details</h2>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  National insurance number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  502135326
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> previous application number</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Licence type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  For personal use
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> licence type</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Home address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  72 Guild Street<br>London<br>SE23 6FH
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> home address</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Licence period
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Valid for 6 months
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> licence period</span></a>
+                </dd>
+              </div>
+            </dl>
+            <form action="case-created" method="post" novalidate>
+              <input type="hidden" name="answers-checked" value="true">
+              <button type="submit" class="govuk-button" data-module="govuk-button">
+                Create case
+              </button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %} -->
+  </div>
+</div>
+
+{% endblock %}

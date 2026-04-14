@@ -1,0 +1,120 @@
+{% extends "layouts/mmw-1.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  
+  <div class="govuk-grid-column-one-third">
+    <h1 class="govuk-heading-l">Case [case ref]</h1>
+    </div>
+    </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <section class="dwp-quick-reference" aria-label="Case information">
+      <dl class="dwp-quick-reference__block">
+        <dt class="dwp-quick-reference__label">Customer:</dt>
+        <dd class="dwp-quick-reference__secondary">Jane Doe</dd>
+        <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary">National Insurance number:</dt>
+        <dd class="dwp-quick-reference__secondary">QQ 12 34 56 X</dd>
+        <dt class="dwp-quick-reference__label">Claim status:</dt>
+        <dd class="dwp-quick-reference__status">
+          <strong class="govuk-tag govuk-tag--green">
+            Active
+          </strong>
+        </dd>
+        <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary">Case owner:</dt>
+        <dd class="dwp-quick-reference__secondary">[Agent name] in [ Team name]</dd>
+      </dl>
+    </section>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">Tasks</h2>
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+        Action 1        
+        </h2>
+        <a class="govuk-link" href="#">Open<span class="govuk-visually-hidden"> (University of Gloucestershire)</span></a>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Upload documents
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Created by
+            </dt>
+            <dd class="govuk-summary-list__value">
+              [Agent name ] in [Team name] 
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Status
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span class="govuk-tag">Completed</span>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Review case
+        </h2>
+        <a class="govuk-link" href="#">Open<span class="govuk-visually-hidden"> (University of Bristol)</span></a>
+       
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Review documents
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Due
+            </dt>
+            <dd class="govuk-summary-list__value">
+              23 Mar 2026
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Created by
+            </dt>
+            <dd class="govuk-summary-list__value">
+              [Agent name ] in [Team name] 
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Status
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span class="govuk-tag govuk-tag--yellow">Active</span>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "layouts/mmw-1.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<!-- 
+    {% include "govuk-prototype-kit/includes/homepage-top.njk" %} -->
+
+   
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Add Tasks to case: [CASE REF]
+          </h1>
+        </legend>
+        <div id="signIn-hint" class="govuk-hint">
+          You can chose whether to add an exoting task or create a new task 
+        </div>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+            <label class="govuk-label govuk-radios__label" for="signIn">
+              Add an existing task
+            </label>
+            <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+              View exsiting task and add them to this case.
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+            <label class="govuk-label govuk-radios__label" for="signIn-2">
+              Create a new task
+            </label>
+            <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+              If you need to create a new task to add to this case
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div>
+        <button type="submit" class="govuk-button govuk-!-static-margin-top-6" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </div>
+
+    <!-- {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %} -->
+  </div>
+</div>
+
+{% endblock %}
