@@ -1,0 +1,347 @@
+{% extends "layouts/mmw-case.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="moj-page-header-actions">
+      <div class="moj-page-header-actions__title">
+        <h1 class="govuk-heading-l">Case details</h1>
+      </div>
+      <div class="moj-page-header-actions__actions">
+        <div class="moj-button-group moj-button-group--inline">
+          
+          <a type="submit" class="govuk-button govuk-button--secondary" href="create-task">
+            Create new task
+          </a>
+          <!-- <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Put on hold
+          </button> -->
+        </div>
+      </div>
+    </div>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+        <dt class="govuk-summary-list__key">
+          Date received
+        </dt>
+        <dd class="govuk-summary-list__value">
+          12 Mar 2026
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Created by
+        </dt>
+        <dd class="govuk-summary-list__value">
+          [Agent Name]
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Due date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          30 Mar 2026
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <span class="govuk-tag govuk-tag--yellow">Active</span>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+        </dd>
+      </div>
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact details
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body">07700 900457</p>
+          <p class="govuk-body">customer.email@example.com</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <ul class="govuk-summary-list__actions-list">
+            <li class="govuk-summary-list__actions-list-item">
+              <a class="govuk-link" href="#">Add<span class="govuk-visually-hidden"> contact details</span></a>
+            </li>
+            <li class="govuk-summary-list__actions-list-item">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+            </li>
+          </ul>
+        </dd>
+      </div>
+    </dl>
+    <h2 class="govuk-heading-m">
+    Representative
+  </h2>
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Darren Peterson
+        </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action">
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> (University of Gloucestershire)</span></a>
+          </li>
+          <li class="govuk-summary-card__action">
+            <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> (University of Gloucestershire)</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Relationship
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Grandson
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Phone
+            </dt>
+            <dd class="govuk-summary-list__value">
+              +44790567776
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              12 Street name<br>Road, City, SW1 1AA
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    <h2 class="govuk-heading-m">Tasks</h2>
+    
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Verify Citizen Address Details 01
+        </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action">
+            <a class="govuk-link" href="task-details">View<span class="govuk-visually-hidden"> (University of Gloucestershire)</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Agent
+            </dt>
+            <dd class="govuk-summary-list__value">
+              568907543
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Team
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Claims one
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Status
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span class="govuk-tag govuk-tag--blue">Completed</span>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Due date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              12 Mar 2026
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Eligible Employment Status GB
+        </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action">
+            <a class="govuk-link" href="#">View<span class="govuk-visually-hidden"> (University of Gloucestershire)</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Agent
+            </dt>
+            <dd class="govuk-summary-list__value">
+              [Agent name]
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Team
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Claims one
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Status
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span class="govuk-tag govuk-tag--yellow">Active</span>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Due date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              12 Apr 2026
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Verify Employment Details 02
+        </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action">
+            <a class="govuk-link" href="#">View<span class="govuk-visually-hidden"> (University of Gloucestershire)</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Agent
+            </dt>
+            <dd class="govuk-summary-list__value">
+              568907543
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Team
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Claims one
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Status
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span class="govuk-tag govuk-tag--blue">Completed</span>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Due date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              12 Mar 2026
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>  
+  <div class="govuk-grid-column-one-third">
+    <!-- <h2 class="govuk-heading-l">Events</h2>
+    <div class="dwp-timeline">
+      <ol class="dwp-timeline__items">
+        <li class="dwp-timeline__item">
+          <p class="dwp-timeline__datetime">16 June 2024 at 1:00am</p>
+          <h2 class="dwp-timeline__heading">Completed ‘DP224JP’ form received</h2>
+          <p class="dwp-timeline__by-line">by System</p>
+        </li>
+        <li class="dwp-timeline__item">
+          <p class="dwp-timeline__datetime">1 June 2024 at 7:14am</p>
+          <h2 class="dwp-timeline__heading">Summary of report including recommendations, suppliers and costs sent to claimant</h2>
+          <p class="dwp-timeline__by-line">by John Goldsmith</p>
+        </li>
+        <li class="dwp-timeline__item">
+          <p class="dwp-timeline__datetime">15 May 2024 at 4:01pm</p>
+          <h2 class="dwp-timeline__heading">Workplace assessment report</h2>
+          <p class="dwp-timeline__by-line">by John Goldsmith</p>
+          <a href="#" class="dwp-timeline__link">View details<span class="govuk-visually-hidden"> of the event on 15 May 2024 at 4:01pm</span></a>
+        </li>
+        <li class="dwp-timeline__item">
+          <p class="dwp-timeline__datetime">26 April 2024 at 12:42pm</p>
+          <h2 class="dwp-timeline__heading">Workplace assessment</h2>
+          <p class="dwp-timeline__by-line">by John Goldsmith</p>
+          <p class="dwp-timeline__content">Agreed with the claimant that a workplace assessment is required and confirmed assessor visit on 5 May 2024 at 9:45am – confirmation letter sent</p>
+        </li>
+        <li class="dwp-timeline__item">
+          <p class="dwp-timeline__datetime">21 April 2024 at 1:12pm</p>
+          <h2 class="dwp-timeline__heading">Update to: Health condition or disability</h2>
+          <p class="dwp-timeline__by-line">by Jane Doe</p>
+          <a href="#" class="dwp-timeline__link">View details<span class="govuk-visually-hidden"> of the event on 21 April 2024 at 1:12pm</span></a>
+        </li>
+        <li class="dwp-timeline__item">
+          <p class="dwp-timeline__datetime">21 April 2024 at 10:15am</p>
+          <h2 class="dwp-timeline__heading">Telephone call made</h2>
+          <p class="dwp-timeline__by-line">by Jane Doe</p>
+          <p class="dwp-timeline__content">A telephone call was made to the claimant requesting further information to support the claim</p>
+          <a href="#" class="dwp-timeline__link">View details<span class="govuk-visually-hidden"> of the event on 21 April 2024 at 10:15am</span></a>
+        </li>
+        <li class="dwp-timeline__item">
+          <p class="dwp-timeline__datetime">19 April 2024 at 10:58am</p>
+          <h2 class="dwp-timeline__heading">Text message (SMS) sent</h2>
+          <p class="dwp-timeline__by-line">by Jane Doe</p>
+          <p class="dwp-timeline__content">SMS was sent to the claimant to inform them that we require further information and will be in contact on 21 April 2024</p>
+        </li>
+        <li class="dwp-timeline__item">
+          <p class="dwp-timeline__datetime">16 April 2024 at 9:00am</p>
+          <h2 class="dwp-timeline__heading">Health condition or disability </h2>
+          <p class="dwp-timeline__by-line">by Jane Doe</p>
+          <p class="dwp-timeline__content">Contact needed for more information</p>
+        </li>
+        <li class="dwp-timeline__item">
+          <p class="dwp-timeline__datetime">28 March 2024 at 9:12am</p>
+          <h2 class="dwp-timeline__heading">Check personal details and add National Insurance number task</h2>
+          <p class="dwp-timeline__by-line">by Jane Doe</p>
+        </li>
+        <li class="dwp-timeline__item">
+          <p class="dwp-timeline__datetime">12 March 2024 at 3:00pm</p>
+          <h2 class="dwp-timeline__heading">Application received</h2>
+        </li>
+      </ol>
+    </div> -->
+   
+  </div> 
+</div>
+
+{% endblock %}

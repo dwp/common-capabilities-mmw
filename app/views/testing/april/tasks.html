@@ -1,0 +1,160 @@
+{% extends "layouts/mmw-1.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-main-wrapper" id="main-content" role="main">
+    <h1 class="govuk-heading-l">My tasks</h1>
+    <form class="form" action="/tasks-ui/agent/my-tasks" method="get" role="form">
+      <div class="govuk-button-group" data-testid="button-group-id">
+        <button class="govuk-button govuk-button--primary" type="submit" value="Claim" data-module="govuk-button">Claim new task</button>
+      </div>
+    </form>
+    <div class="govuk-grid-row" data-testid="grid-row">
+      <div data-testid="column-two-thirds" class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group" data-testid="form-group-id">
+          <label class="govuk-label" for="input-filter">Filter your tasks</label>
+          <input class="govuk-input govuk-input--width-10" id="input-filter" name="inputFilter" type="text" value="">
+          <button class="govuk-button govuk-button--secondary" type="submit" value="Filter" data-module="govuk-button">Filter</button>
+        </div>
+      </div>
+      <div data-testid="column-one-third" class="govuk-grid-column-one-third">
+        <div class="tasks-sort-inner">
+          <div class="govuk-form-group" data-testid="form-group-id">
+            <label class="govuk-label" for="sort">Sort by</label>
+            <select class="govuk-select" id="sort" name="sort" data-testid="select-component">
+              <option data-testid="sort-option" value="claimedNewestToOldest">Claimed, newest to oldest</option>
+              <option data-testid="sort-option" value="claimedOldestToNewest">Claimed, oldest to newest</option>
+              <option data-testid="sort-option" value="dueDateSoonestToLatest">Due, soonest to latest</option>
+              <option data-testid="sort-option" value="dueDateLatestToSoonest">Due, latest to soonest</option>
+              <option data-testid="sort-option" value="createdNewestToOldest">Created, newest to oldest</option>
+              <option data-testid="sort-option" value="createdOldestToNewest">Created, oldest to newest</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="govuk-grid-row" data-testid="grid-row">
+      <div data-testid="column-full" class="govuk-grid-column-full">
+        <table class="govuk-table view-tasks-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Tasks</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header ">Details</th>
+              <th scope="col" class="govuk-table__header ">
+                <span class="govuk-visually-hidden">Date created</span>
+                <span aria-hidden="true">Created</span>
+              </th>
+              <th scope="col" class="govuk-table__header ">Task</th>
+              <th scope="col" class="govuk-table__header table-cell-fixed-width">
+                <span class="govuk-visually-hidden">National Insurance Number</span>
+                <span aria-hidden="true">National Insurance<br>number</span>
+              </th>
+              <th scope="col" class="govuk-table__header ">
+                <span class="govuk-visually-hidden">Date due</span>
+                <span aria-hidden="true">Due</span>
+              </th>
+              <th scope="col" class="govuk-table__header ">
+                Status
+              </th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row"><td class="govuk-table__cell " data-testid="table-cell">
+              <a class="govuk-link" href="/tasks-ui/agent/agent-task-details">Start<span class="govuk-visually-hidden"> Issue Benefits Amount 04 for Not applicable.</span></a>
+            </td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">21 April 2026</span><span aria-hidden="true">21 Apr 2026</span>
+            </td>
+            <td class="govuk-table__cell " data-testid="table-cell">Issue Benefits Amount 04
+
+            </td>
+            <td class="govuk-table__cell " data-testid="table-cell">HP 12 71 26 B</td>
+            <td class="govuk-table__cell " data-testid="table-cell">
+              <span><strong class="govuk-tag govuk-tag--red govuk-!-font-weight-bold">OVERDUE</strong></span>
+              <br><span class="govuk-visually-hidden">23 April 2026 at 00:09</span><span aria-hidden="true">23 Apr 2026 at 00:09</span>
+            </td>
+            <td class="govuk-table__cell " data-testid="table-cell"><strong role="status" class="govuk-tag govuk-tag--yellow govuk-!-font-weight-bold">ALLOCATED</strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell " data-testid="table-cell">
+              <a class="govuk-link" href="task-details-notes">Action
+                <span class="govuk-visually-hidden"> Issue Benefits Amount 04 for Not applicable.</span>
+              </a>
+            </td>
+            <td class="govuk-table__cell " data-testid="table-cell">
+              <span class="govuk-visually-hidden">21 April 2026</span>
+              <span aria-hidden="true">21 Apr 2026</span>
+            </td>
+            <td class="govuk-table__cell " data-testid="table-cell">Issue Benefits Amount 04</td>
+            <td class="govuk-table__cell " data-testid="table-cell">AE 76 78 06 B</td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span><strong class="govuk-tag govuk-tag--red govuk-!-font-weight-bold">OVERDUE</strong></span><br><span class="govuk-visually-hidden">22 April 2026 at 01:01</span><span aria-hidden="true">22 Apr 2026 at 01:01</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><strong role="status" class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link" href="/tasks-ui/agent/agent-task-details">Action<span class="govuk-visually-hidden"> Benefits Amount 04 for Not applicable.</span></a></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February 2026</span><span aria-hidden="true">19 Feb 2026</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell">Benefits Amount 04</td><td class="govuk-table__cell " data-testid="table-cell">AE 76 78 09 A</td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February 2027 at 09:08</span><span aria-hidden="true">19 Feb 2027 at 09:08</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><strong role="status" class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link" href="/tasks-ui/agent/agent-task-details">Action<span class="govuk-visually-hidden"> Benefits Amount 00 for Not applicable.</span></a></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February 2026</span><span aria-hidden="true">19 Feb 2026</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell">Benefits Amount 00</td><td class="govuk-table__cell " data-testid="table-cell">AE 76 78 09 A</td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February 2027 at 09:07</span><span aria-hidden="true">19 Feb 2027 at 09:07</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><strong role="status" class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link" href="/tasks-ui/agent/agent-task-details">Action<span class="govuk-visually-hidden"> Eligible Employment Status Wales for Not applicable.</span></a></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">16 February 2026</span><span aria-hidden="true">16 Feb 2026</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell">Eligible Employment Status Wales</td><td class="govuk-table__cell " data-testid="table-cell">AE 76 78 09 A</td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span><strong class="govuk-tag govuk-tag--red govuk-!-font-weight-bold">OVERDUE</strong></span><br><span class="govuk-visually-hidden">16 February 2026 at 22:39</span><span aria-hidden="true">16 Feb 2026 at 22:39</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><strong role="status" class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong></td></tr><tr class="govuk-table__row">
+            <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link" href="/tasks-ui/agent/agent-task-details">Action<span class="govuk-visually-hidden"> Eligible Employment Status Wales for Not applicable.</span></a></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">16 February 2026</span><span aria-hidden="true">16 Feb 2026</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell">Eligible Employment Status Wales</td><td class="govuk-table__cell " data-testid="table-cell">HP 12 68 23 B</td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span><strong class="govuk-tag govuk-tag--red govuk-!-font-weight-bold">OVERDUE</strong></span><br><span class="govuk-visually-hidden">16 February 2026 at 22:38</span><span aria-hidden="true">16 Feb 2026 at 22:38</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><strong role="status" class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link" href="/tasks-ui/agent/agent-task-details">Action<span class="govuk-visually-hidden"> Eligible Employment Status Wales for Not applicable.</span></a></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">16 February 2026</span><span aria-hidden="true">16 Feb 2026</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell">Eligible Employment Status Wales</td><td class="govuk-table__cell " data-testid="table-cell">HP 12 68 23 B</td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span><strong class="govuk-tag govuk-tag--red govuk-!-font-weight-bold">OVERDUE</strong></span><br><span class="govuk-visually-hidden">16 February 2026 at 22:37</span><span aria-hidden="true">16 Feb 2026 at 22:37</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><strong role="status" class="govuk-tag govuk-tag--blue govuk-!-font-weight-bold">ON HOLD</strong><div>until <span class="govuk-visually-hidden">1 July 2026</span><span aria-hidden="true">1 Jul 2026</span></div></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link" href="/tasks-ui/agent/agent-task-details">Action<span class="govuk-visually-hidden"> Eligible Employment Status Wales for Not applicable.</span></a></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">16 February 2026</span><span aria-hidden="true">16 Feb 2026</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell">Eligible Employment Status Wales</td><td class="govuk-table__cell " data-testid="table-cell">HP 12 68 23 B</td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span><strong class="govuk-tag govuk-tag--red govuk-!-font-weight-bold">OVERDUE</strong></span><br><span class="govuk-visually-hidden">16 February 2026 at 22:37</span><span aria-hidden="true">16 Feb 2026 at 22:37</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><strong role="status" class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link" href="/tasks-ui/agent/agent-task-details">Action<span class="govuk-visually-hidden"> Eligible Employment Status Wales for Not applicable.</span></a></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">4 February 2026</span><span aria-hidden="true">4 Feb 2026</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell">Eligible Employment Status Wales</td>
+            <td class="govuk-table__cell " data-testid="table-cell">AE 76 78 09 A</td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span><strong class="govuk-tag govuk-tag--red govuk-!-font-weight-bold">OVERDUE</strong></span><br><span class="govuk-visually-hidden">5 February 2026 at 00:51</span><span aria-hidden="true">5 Feb 2026 at 00:51</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><strong role="status" class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link" href="/tasks-ui/agent/agent-task-details">Action<span class="govuk-visually-hidden"> Eligible Employment Status Wales for Not applicable.</span></a></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">27 January 2026</span><span aria-hidden="true">27 Jan 2026</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell">Eligible Employment Status Wales</td>
+            <td class="govuk-table__cell " data-testid="table-cell">AE 76 78 09 A</td>
+            <td class="govuk-table__cell " data-testid="table-cell"><span><strong class="govuk-tag govuk-tag--red govuk-!-font-weight-bold">OVERDUE</strong></span><br><span class="govuk-visually-hidden">21 April 2026 at 17:44</span><span aria-hidden="true">21 Apr 2026 at 17:44</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell"><strong role="status" class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong></td>
+          </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+{% endblock %}
