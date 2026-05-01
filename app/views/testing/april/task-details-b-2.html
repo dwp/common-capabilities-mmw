@@ -1,0 +1,115 @@
+{% extends "layouts/mmw-1.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<!-- 
+    {% include "govuk-prototype-kit/includes/homepage-top.njk" %} -->
+
+    <div class="govuk-form-group" data-testid="form-group-id">
+      <h1 class="govuk-heading-l">Change for Jane Doe</h1>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" aria-label="Customer">Customer</dt>
+        <dd class="govuk-summary-list__value">Jane Doe</dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" aria-label="National Insurance number">National Insurance number</dt>
+        <dd class="govuk-summary-list__value">HP 12 68 23 B </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" aria-label="Task">Task type</dt>
+        <dd class="govuk-summary-list__value">Change</dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" aria-label="Change task type" href="/tasks-ui/agent/select-task-type">Change
+            <span class="govuk-visually-hidden"> task type</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" aria-label="Task">Task number</dt>
+        <dd class="govuk-summary-list__value">98643380098</dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" aria-label="Task">Case reference</dt>
+        <dd class="govuk-summary-list__value">JSA23455653</dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" aria-label="Change task type" href="case-details">View
+            <span class="govuk-visually-hidden"> task type</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" aria-label="Task">Date completed</dt>
+        <dd class="govuk-summary-list__value">20 Apr 2026</dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" aria-label="Due">Date due</dt>
+        <dd class="govuk-summary-list__value">21 Apr 2026 at 09:07</dd>
+        <dd class="govuk-summary-list__actions"></dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" aria-label="Created">Date created</dt>
+        <dd class="govuk-summary-list__value">17 Apr 2026 at 09:07</dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" aria-label="Task">Priority</dt>
+        <dd class="govuk-summary-list__value">Low</dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" aria-label="Change task type" href="/tasks-ui/agent/select-task-type">Change
+            <span class="govuk-visually-hidden"> task type</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" aria-label="Status">Status</dt>
+        <dd class="govuk-summary-list__value">
+          <strong role="status" class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/tasks-ui/agent/put-on-hold">Put on hold</a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" aria-label="Task">Agent</dt>
+        <dd class="govuk-summary-list__value">B776543</dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" aria-label="Change task type" href="/tasks-ui/agent/select-task-type">Return to queue
+            <span class="govuk-visually-hidden"> task type</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" aria-label="Task">Blocked</dt>
+        <dd class="govuk-summary-list__value">No</dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" aria-label="Change task type" href="/tasks-ui/agent/select-task-type">Change
+            <span class="govuk-visually-hidden"> task type</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" aria-label="Task">Matching criteria</dt>
+        <dd class="govuk-summary-list__value">Claim processing</dd>
+      </div>
+    </dl>
+  </div>
+    
+    <div class="govuk-button-group">
+      <a class="govuk-button govuk-button--secondary" href="case-details-noti">
+        View task history
+      </a>
+      <a class="govuk-button govuk-button--secondary" href="govuk-button">
+        Back
+      </a>
+    </div>
+    <!-- {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %} -->
+  </div>
+  <div class="govuk-grid-column-one-third">
+  </div>
+</div>
+
+{% endblock %}
