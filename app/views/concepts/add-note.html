@@ -1,0 +1,39 @@
+{% extends "layouts/mmw-concept.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row grey-bg">
+ 
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      Add note
+    </h1>
+    <div>
+      <div class="govuk-form-group govuk-character-count case-section-container" data-module="govuk-character-count" data-maxlength="1000">
+      
+        <div id="with-hint-hint" class="govuk-hint">
+          explainer about how to use the feature think about what to include and what not to include in a note.
+        </div>
+        <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+        <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+          You can enter up to 1000 characters
+        </div>
+      </div>
+      <div class="govuk-button-group">
+        <a class="govuk-button" href="review-task">
+          Continue
+        </a>
+        <a class="govuk-button govuk-button--secondary" href="case-details">
+          Cancel
+        </a>
+      </div>
+    </div>
+   
+
+
+
+ 
+
+{% endblock %}

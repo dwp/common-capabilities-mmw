@@ -1,0 +1,75 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+{% from "internal-service-header/macro.njk" import dwpHeader %}
+{% from "internal-service-footer/macro.njk" import dwpFooter %}
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+{% set bodyClasses = "" %}
+{% block bodyStart %}
+
+{% endblock %}
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true,
+            navigation: {
+              items: [
+                {
+                    href: "my-tasks",
+                    text: "My work"
+                },
+                {
+                    href: "my-cases-table",
+                    text: "My cases"
+                },
+                {
+                    href: "find-a-case",
+                    text: "Find a customer"
+                }
+            ]
+          }  
+    })
+}}
+
+<section class="dwp-quick-reference dwp-quick-reference--alternative govuk-!-static-margin-top-0" aria-label="Case information">
+    <div class="govuk-width-container">
+        <dl>
+            <dt class="dwp-quick-reference__label">Jane Doe</dt>
+            <dt class="dwp-quick-reference__label ">QQ 12 34 56 A</dt>
+            <dd class="dwp-quick-reference__secondary">JSA23455653</dd>
+        </dl>
+    </div>
+   
+</section>
+{% endblock %}
+
+{% block footer %}
+{{
+    dwpFooter({
+        meta: {
+            visuallyHiddenTitle: "About this website",
+            items: [
+            {
+                href: "",
+                text: "Accessibility statement"
+            },
+            {
+                href: "",
+                text: "Privacy"
+            },
+            {
+                href: "/manage-prototype/clear-data",
+                text: "Clear data"
+              }
+            ]
+        }
+    }) 
+}}
+{% endblock %}
+
+
+
