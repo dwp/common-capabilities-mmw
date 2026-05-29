@@ -8,31 +8,30 @@
  
   <div class="govuk-grid-column-full">
    
-    <form action="find-a-case-results" method="post">
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--l" for="event-name">
-            Find a case
-          </label>
-        </h1>
-        <div id="search-hint" class="govuk-hint moj-search__hint ">
-          You can search by name, date of birth or National Insurance number
-        </div>
-        <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--l" for="event-name">
+          Find a case
+        </label>
+      </h1>
+      <div id="search-hint" class="govuk-hint moj-search__hint ">
+        You can search by name, date of birth or National Insurance number
       </div>
-      <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+      <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="twoThirds" type="text">
+      <a href="find-a-case-results" class="govuk-button" >
         Search
-      </button>
-    </form>
+      </a>
+    </div>
     <div class="govuk-!-static-margin-top-6">
-      <h2>results for [search term]</h2>
+      <h2 class="govuk-heading-m">Results for QQ 12 34 56 A</h2>
       <div class="case-section-container">
     
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-one-third">
-            <h2 class="govuk-heading-m govuk-!-static-margin-bottom-0"><a href="case-details">QQ 66 75 34D</a></h2>
+            <h2 class="govuk-heading-m govuk-!-static-margin-bottom-0"><a href="case-details">QQ 12 34 56 A</a></h2>
             <p class="govuk-!-static-margin-bottom-0">Jane Doe</p>
-            <span class="govuk-hint ">Claim</span>
+            <span class="govuk-hint ">Claim</span><br>
+            <span class="govuk-tag govuk-tag--green">Active</span>
           </div>
           <div class="govuk-grid-column-two-thirds">
             <table class="govuk-table govuk-!-static-margin-bottom-1">
@@ -62,9 +61,10 @@
         
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-one-third">
-              <h2 class="govuk-heading-m govuk-!-static-margin-bottom-0"><a href="case-details">QQ 11 25 33 D</a></h2>
-              <p class="govuk-!-static-margin-bottom-0">Clarence Dean</p>
-              <span class="govuk-hint ">Claim</span>
+              <h2 class="govuk-heading-m govuk-!-static-margin-bottom-0"><a href="case-details">QQ 12 34 56 A</a></h2>
+              <p class="govuk-!-static-margin-bottom-0">Jane Doe</p>
+              <span class="govuk-hint ">Claim</span><br>
+              <span class="govuk-tag govuk-tag--grey">Closed</span>
             </div>
             <div class="govuk-grid-column-two-thirds">
               <table class="govuk-table govuk-!-static-margin-bottom-1">
@@ -82,7 +82,7 @@
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Change</th>
-                    <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Active</span></td>
+                    <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Completed</span></td>
                   </tr>
                 </tbody>
               </table>
