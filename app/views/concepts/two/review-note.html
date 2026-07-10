@@ -1,0 +1,66 @@
+{% extends "layouts/mmw-concept-1.html" %}
+
+{% set pageName="Home" %}
+
+
+
+<div class="govuk-grid-row">
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+  {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+  
+  {% block containerStart %}
+    {{ govukBackLink({
+      text: "Back",
+      href: "#"
+    }) }}
+  {% endblock %}
+  
+  {% block content %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+  
+        <h1 class="govuk-heading-l">Review note</h1>
+  
+        <h2 class="govuk-heading-m">Task details</h2>
+  
+        {{ govukSummaryList({
+          classes: "govuk-!-margin-bottom-9",
+          rows: [
+            {
+              key: {
+                text: "Note"
+              },
+              value: {
+                text: "Information required"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "task type"
+                  }
+                ]
+              }
+            }
+          ]
+        }) }}
+
+  
+        <form action="" method="post" novalidate>
+  
+          <input type="hidden" name="answers-checked" value="true">
+  
+          {{ govukButton({
+            text: "Add note"
+          }) }}
+  
+        </form>
+  
+      </div>
+    </div>
+  {% endblock %}
+</div>
+
+

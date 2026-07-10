@@ -1,0 +1,100 @@
+{% extends "layouts/mmw-concept-1.html" %}
+
+{% set pageName="Home" %}
+
+
+
+<div class="govuk-grid-row">
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+  {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+  
+  {% block containerStart %}
+    {{ govukBackLink({
+      text: "Back",
+      href: "#"
+    }) }}
+  {% endblock %}
+  
+  {% block content %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+  
+        <h1 class="govuk-heading-l">Review BF</h1>
+  
+        <h2 class="govuk-heading-m">Task details</h2>
+  
+        {{ govukSummaryList({
+          classes: "govuk-!-margin-bottom-9",
+          rows: [
+            {
+              key: {
+                text: "Type"
+              },
+              value: {
+                text: "Information required"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "task type"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Note"
+              },
+              value: {
+                text: "text from note"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "date of birth"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Expires"
+              },
+              value: {
+                text: "25 Jul 2028"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "customer reference"
+                  }
+                ]
+              }
+            }
+          ]
+        }) }}
+
+  
+        <form action="" method="post" novalidate>
+  
+          <input type="hidden" name="answers-checked" value="true">
+  
+          {{ govukButton({
+            text: "Set BF"
+          }) }}
+  
+        </form>
+  
+      </div>
+    </div>
+  {% endblock %}
+</div>
+
+
