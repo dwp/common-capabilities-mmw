@@ -4,12 +4,61 @@
 
 {% block content %}
 
+
 <div class="govuk-grid-row">
  
   <div class="govuk-grid-column-full">
     <h2 class="govuk-heading-l">My teams cases</h2>
+  </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      recived
+    </div>
+    <div class="govuk-grid-column-one-third">
+      unallocated
+    </div>
+    <div class="govuk-grid-column-one-third">
+      inprogress
+    </div>
+  </div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      filter
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Filter
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
+              <label class="govuk-label govuk-radios__label" for="changedName">
+                Monthly
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
+              <label class="govuk-label govuk-radios__label" for="changedName-2">
+                Yearly
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      third
+    </div>
+
+  </div>
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
     <div class="" id="">
-      <div>filter by agent</div>
       <table class="govuk-table">
         <caption class="govuk-table__caption"> Showing 4 of 12  cases</caption>
         <thead class="govuk-table__head">
