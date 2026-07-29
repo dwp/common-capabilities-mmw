@@ -1,37 +1,97 @@
-{% extends "layouts/mmw-concept.html" %}
+{% extends "layouts/mmw-concept-1-blank-tl.html" %}
 
 {% set pageName="Home" %}
+{% from "horizontal-navigation/macro.njk" import dwpHorizontalNavigation %}
+
 
 {% block content %}
 
-<div class="govuk-grid-row grey-bg">
+<div class="govuk-grid-row ">
 
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-l">
-      Add tl test
+      Team [Team Name]'s Work
     </h1>
-    <div>
-      <div class="govuk-form-group govuk-character-count case-section-container" data-module="govuk-character-count"
-        data-maxlength="1000">
-
-        <div id="with-hint-hint" class="govuk-hint">
-          explainer about how to use the feature think about what to include and what not to include in a note.
-        </div>
-        <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="5"
-          aria-describedby="with-hint-info with-hint-hint"></textarea>
-        <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
-          You can enter up to 1000 characters
-        </div>
+    <div class="govuk-!-padding-bottom-5">
+      <h2 class="govuk-heading-m">Overview</h2>
+      <p>This shows the number of cases that were created / received and closed in the last 24 hours. Click on View to
+        see more information.</p>
+      <div class="govuk-body panel blue">
+        <div class="count">23</div>
+        <div class="stat">New cases recevied</div>
+        <span><a href="">view</a></span>
       </div>
-      <div class="govuk-button-group">
-        <a class="govuk-button" href="review-task">
-          Continue
-        </a>
-        <a class="govuk-button govuk-button--secondary" href="case-details">
-          Cancel
-        </a>
+      <div class="govuk-body panel blue">
+        <div class="count">23</div>
+        <div class="stat">Closed cases</div>
+        <span><a href="">view</a></span>
       </div>
     </div>
+    <div class="govuk-!-padding-bottom-5">
+      <h2 class="govuk-heading-m">Active cases</h2>
+
+      <div class="govuk-body panel blue">
+        <div class="count">45</div>
+        <div class="stat">Unallocated cases</div>
+        <span><a href="">view</a></span>
+      </div>
+      <div class="govuk-body panel blue">
+        <div class="count">23</div>
+        <div class="stat">Allocated cases</div>
+        <span><a href="">view</a></span>
+      </div>
+      <div class="govuk-body panel red">
+        <div class="count">6</div>
+        <div class="stat">Overdue cases</div>
+        <span><a href="">view</a></span>
+      </div>
+    </div>
+
+    <div>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">All open cases sorted by type</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Type</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">New (in last 24 hours)</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Unallocated</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Allocated</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Total</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">View</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Initial claim</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">23</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">16</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">95</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="cases-by-type" class="govuk-link">List of
+                cases</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Initial review</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">21</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">List of
+                cases</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Final review</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">23</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">28</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">List of
+                cases</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
 
 
 

@@ -1,18 +1,55 @@
 //
 // For guidance on how to add CSS and SCSS see:
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
-// 
+//
 
 // Add extra styles here
 
-
 .grey-bg {
-    background-color: #f4f8fb;
+  background-color: #f4f8fb;
 }
 
 .case-section-container {
-    background-color: #ffffff;
-    border: 1px solid 	#cecece;
-    padding:16px;
-    margin-bottom:60px;
+  background-color: #ffffff;
+  border: 1px solid #cecece;
+  padding: 16px;
+  margin-bottom: 60px;
+}
+.panel {
+  padding: 8px;
+  display: inline-block;
+  min-width: 25%;
+  background-color: #f4f8fb;
+  margin-right: 2em;
+
+  .count {
+    font-weight: 800;
+    font-size: 2em;
+  }
+  .stat {
+  }
+
+  &.blue {
+    border-left: 10px solid #5694ca;
+  }
+
+  &.red {
+    border-left: 10px solid #ca3535;
+    background-color: #f4d7d7;
+  }
+}
+
+.cases-type-breakdown-container {
+  padding-top: 16px;
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-items: flex-start;
+
+  .cases-type-breakdown-item {
+    justify-items: center;
+    border-right: 1px solid black;
+    padding: 1em;
+  }
 }
