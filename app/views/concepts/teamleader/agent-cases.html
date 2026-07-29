@@ -1,0 +1,73 @@
+{% extends "layouts/mmw-concept-1-blank-tl.html" %}
+
+{% set pageName="Home" %}
+{% from "horizontal-navigation/macro.njk" import dwpHorizontalNavigation %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row ">
+
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      Sue Benjamins cases
+    </h1>
+    <div>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Case list</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Case type</th>
+            <th scope="col" class="govuk-table__header">Customer</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Created</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Due</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Status</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Action</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Initial claim</th>
+            <td class="govuk-table__cell">QQ 34 56 78 C<br>
+              Evan Willis
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">23 Jul 2026</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">10 Aug 2026</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><span
+                class="govuk-tag govuk-tag--green">Active</span></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="cases-by-type" class="govuk-link">View
+                case</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Initial review</th>
+            <td class="govuk-table__cell">QQ 12 34 56 A<br>
+              Jane Doe
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">24 Jul 2026</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">11 Aug 2026</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><span
+                class="govuk-tag govuk-tag--green">Active</span></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">View case</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Final review</th>
+            <td class="govuk-table__cell">QQ 23 55 78 B<br>
+              James Ward
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">23 Jun 2026</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2 Jul 2026</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><span
+                class="govuk-tag govuk-tag--red">Overdue</span>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">View case</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+
+
+    {% endblock %}

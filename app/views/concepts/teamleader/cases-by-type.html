@@ -1,0 +1,68 @@
+{% extends "layouts/mmw-concept-1-blank-tl.html" %}
+
+{% set pageName="Home" %}
+{% from "horizontal-navigation/macro.njk" import dwpHorizontalNavigation %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row ">
+
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      My teams work
+    </h1>
+
+    <div>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Initial claims cases</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Case owner</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Customer</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Created</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Due</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Status</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Action</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Unallocated</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">QQ 12 34 56 A<br>
+              Jane Doe</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">12 Jun 2026</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">30 Jun 2026</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Active</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="unallocated-case" class="govuk-link">view
+                case</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="">Sue Benjamin</a></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">QQ 23 55 78 B<br>
+              James Ward</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">01 Jul 2026</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">14 Jul 2026</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Active</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">view case</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="">Darren Target</a></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">QQ 34 56 78 C<br>
+              Evan Willis</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">10 Jul 2026</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">24 Jul 2026</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Active</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">view case</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+
+
+    {% endblock %}

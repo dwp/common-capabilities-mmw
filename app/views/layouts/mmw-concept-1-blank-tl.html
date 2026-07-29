@@ -1,0 +1,94 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+{% from "internal-service-header/macro.njk" import dwpHeader %}
+{% from "internal-service-footer/macro.njk" import dwpFooter %}
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+{% from "horizontal-navigation/macro.njk" import dwpHorizontalNavigation %}
+{% set bodyClasses = "" %}
+{% block bodyStart %}
+
+{% endblock %}
+{% block header %}
+{{
+dwpHeader({
+serviceName: serviceName,
+serviceHref: "/",
+container: true,
+navigation: {
+items: [
+{
+href: "home",
+text: "Work queue"
+},
+{
+href: "my-team",
+text: "My team"
+},
+{
+href: "my-bfs",
+text: "My BFs"
+},
+{
+href: "find-a-case",
+text: "Find a case"
+}
+]
+}
+})
+
+
+
+}}
+
+{% endblock %}
+{% block secondnav%}
+{{
+dwpHorizontalNavigation({
+selectedItem: "#s-item-1",
+items: [
+{
+text: "Item 1",
+href: "#s-item-1",
+id: "s-item-1"
+},
+{
+text: "Item 2",
+href: "#s-item-2",
+id: "s-item-2"
+},
+{
+text: "Item 3",
+href: "#s-item-3",
+id: "s-item-3"
+}
+]
+})
+}}
+{% endblock%}
+
+{% block footer %}
+{{
+dwpFooter({
+meta: {
+visuallyHiddenTitle: "About this website",
+items: [
+{
+href: "",
+text: "Accessibility statement"
+},
+{
+href: "",
+text: "Privacy"
+},
+{
+href: "/manage-prototype/clear-data",
+text: "Clear data"
+}
+]
+}
+})
+}}
+{% endblock %}

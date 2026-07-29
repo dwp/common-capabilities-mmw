@@ -1,0 +1,52 @@
+{% extends "layouts/mmw-concept-1-blank-tl.html" %}
+
+{% set pageName="Home" %}
+{% from "horizontal-navigation/macro.njk" import dwpHorizontalNavigation %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row ">
+
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      My team
+    </h1>
+    <div>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Agents in team</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Agent</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Cases</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Action</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="agent">Sue Benjamin</a></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">21</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="agent-cases.html" class="govuk-link">view
+                cases</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="">Darren Target</a></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">28</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">view cases</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+    </div>
+
+
+
+
+
+
+
+    {% endblock %}
