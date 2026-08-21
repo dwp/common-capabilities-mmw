@@ -7,10 +7,10 @@
 <div class="govuk-grid-row">
   <h1 class="govuk-heading-l">My BFs </h1>
   <div class="govuk-main-wrapper " id="main-content" role="main">
-    
+
     <form class="form" action="/tasks-ui/agent/my-tasks" method="get" role="form">
       <div class="govuk-button-group" data-testid="button-group-id">
-        <a class="govuk-button govuk-button--primary"  href="create-bf">Create new BF</a>
+        <a class="govuk-button govuk-button--primary" href="create-bf">Create new BF</a>
       </div>
     </form>
     <div class="govuk-grid-row " data-testid="grid-row">
@@ -55,58 +55,64 @@
                 <span class="govuk-visually-hidden">Date due</span>
                 <span aria-hidden="true">Due</span>
               </th>
-              <th scope="col" class="govuk-table__header ">
-                Status
-              </th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
-            <tr class="govuk-table__row"><td class="govuk-table__cell " data-testid="table-cell">
-              <a class="govuk-link" href="bf-details">View<span class="govuk-visually-hidden"> Issue Benefits Amount 04 for Not applicable.</span></a>
-            </td>
-            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">21 April 2026</span><span aria-hidden="true">21 May 2026</span>
-            </td>
-            <td class="govuk-table__cell " data-testid="table-cell">Infromation required</td>
-            <td class="govuk-table__cell " data-testid="table-cell">QQ 12 34 56 A</td>
-            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">23 April 2026 at 00:09</span><span aria-hidden="true">23 June 2026 at 00:09</span>
-            </td>
-            <td class="govuk-table__cell " data-testid="table-cell"><strong role="status" class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong>
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell " data-testid="table-cell">
-              <a class="govuk-link" href="task-details">View
-                <span class="govuk-visually-hidden"> Issue Benefits Amount 04 for Not applicable.</span>
-              </a>
-            </td>
-            <td class="govuk-table__cell " data-testid="table-cell">
-              <span class="govuk-visually-hidden">21 April 2026</span>
-              <span aria-hidden="true">21 May 2026</span>
-            </td>
-            <td class="govuk-table__cell " data-testid="table-cell">Continue processing</td>
-            <td class="govuk-table__cell " data-testid="table-cell">QQ 23 55 78 B</td>
-            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">22 April 2026 at 01:01</span><span aria-hidden="true">22 June 2026 at 01:01</span></td>
-            <td class="govuk-table__cell " data-testid="table-cell"><strong role="status" class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link" href="task-2-details-a1">View<span class="govuk-visually-hidden"> Claim.</span></a></td>
-            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February 2026</span><span aria-hidden="true">19 May 2026</span></td>
-            <td class="govuk-table__cell " data-testid="table-cell">Review</td><td class="govuk-table__cell " data-testid="table-cell">QQ 34 56 78 C</td>
-            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February 2027 at 09:08</span><span aria-hidden="true">19 June 2027 at 09:08</span></td>
-            <td class="govuk-table__cell " data-testid="table-cell"><strong role="status" class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link" href="task-2-details-a2">View<span class="govuk-visually-hidden"> Change.</span></a></td>
-            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 May 2026</span><span aria-hidden="true">19 May 2026</span></td>
-            <td class="govuk-table__cell " data-testid="table-cell">To Do</td><td class="govuk-table__cell " data-testid="table-cell">QQ 34 56 78 C</td>
-            <td class="govuk-table__cell " data-testid="table-cell"><strong class="govuk-tag govuk-tag--red govuk-!-font-weight-bold">OVERDUE</strong></span><br><span class="govuk-visually-hidden">19 February 2027 at 09:07</span><span aria-hidden="true">19 May 2027 at 09:07</span></td>
-            <td class="govuk-table__cell " data-testid="table-cell"><strong role="status" class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong></td>
-          </tr>
-            </tbody>
-          </table>
-        </div>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell " data-testid="table-cell">
+                <a class="govuk-link" href="bf-details">View<span class="govuk-visually-hidden"> Issue Benefits Amount
+                    04 for Not applicable.</span></a>
+              </td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">21 April
+                  2026</span><span aria-hidden="true">21 May 2026</span>
+              </td>
+              <td class="govuk-table__cell " data-testid="table-cell">Infromation required</td>
+              <td class="govuk-table__cell " data-testid="table-cell">QQ 12 34 56 A</td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">23 April 2026
+                  at 00:09</span><span aria-hidden="true">23 June 2026 at 00:09</span>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell " data-testid="table-cell">
+                <a class="govuk-link" href="task-details">View
+                  <span class="govuk-visually-hidden"> Issue Benefits Amount 04 for Not applicable.</span>
+                </a>
+              </td>
+              <td class="govuk-table__cell " data-testid="table-cell">
+                <span class="govuk-visually-hidden">21 April 2026</span>
+                <span aria-hidden="true">21 May 2026</span>
+              </td>
+              <td class="govuk-table__cell " data-testid="table-cell">Continue processing</td>
+              <td class="govuk-table__cell " data-testid="table-cell">QQ 23 55 78 B</td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">22 April 2026
+                  at 01:01</span><span aria-hidden="true">22 June 2026 at 01:01</span></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link"
+                  href="task-2-details-a1">View<span class="govuk-visually-hidden"> Claim.</span></a></td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February
+                  2026</span><span aria-hidden="true">19 May 2026</span></td>
+              <td class="govuk-table__cell " data-testid="table-cell">Review</td>
+              <td class="govuk-table__cell " data-testid="table-cell">QQ 34 56 78 C</td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February
+                  2027 at 09:08</span><span aria-hidden="true">19 June 2027 at 09:08</span></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link"
+                  href="task-2-details-a2">View<span class="govuk-visually-hidden"> Change.</span></a></td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 May
+                  2026</span><span aria-hidden="true">19 May 2026</span></td>
+              <td class="govuk-table__cell " data-testid="table-cell">To Do</td>
+              <td class="govuk-table__cell " data-testid="table-cell">QQ 34 56 78 C</td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February
+                  2027 at 09:07</span><span aria-hidden="true">19 May 2027 at
+                  09:07</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
+  </div>
 </div>
 
 

@@ -1,0 +1,119 @@
+{% extends "layouts/mmw-concept-1.html" %}
+
+{% set pageName="Case details" %}
+{% from "horizontal-navigation/macro.njk" import dwpHorizontalNavigation %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+    <div class="moj-page-header-actions">
+      <div class="moj-page-header-actions__title">
+        <span class="govuk-caption-m">Initial claim</span>
+        <h1 class="govuk-heading-l">Case 88888888888</h1>
+        <strong class="govuk-tag govuk-tag--green">
+          Active
+        </strong>
+      </div>
+      <div class="moj-page-header-actions__actions">
+        <div class="moj-button-group moj-button-group--inline">
+
+          <a href="transfer-case" class="govuk-button govuk-button--secondary">
+            Transfer case
+          </a>
+          <a href="close-case" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Close case
+          </a>
+        </div>
+      </div>
+    </div>
+    {{
+    dwpHorizontalNavigation({
+    selectedItem: "case-details-v2",
+    items: [
+    {
+    text: "Details",
+    href: "case-details-v2",
+    id: "s-item-1"
+    },
+    {
+    text: "Tasks",
+    href: "case-tasks",
+    id: "s-item-2"
+    },
+    {
+    text: "Notes",
+    href: "case-notes",
+    id: "s-item-3"
+    },
+    {
+    text: "BFs",
+    href: "case-bfs",
+    id: "s-item-4"
+    },
+    {
+    text: "Documents",
+    href: "case-documents",
+    id: "s-item-5"
+    }
+    ]
+    })
+    }}
+    <div class="govuk-!-static-padding-top-5">
+      <h2 class="govuk-heading-m">Case details</h2>
+      <dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+          <dt class="govuk-summary-list__key">
+            Created
+          </dt>
+          <dd class="govuk-summary-list__value">
+            12 Mar 2026
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Due
+          </dt>
+          <dd class="govuk-summary-list__value">
+            30 Mar 2026
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Status
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <span class="govuk-tag govuk-tag--yellow">Active</span>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Case owner
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">8899645321</p>
+            <p class="govuk-body">agent.email@example.com</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <ul class="govuk-summary-list__actions-list">
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+              </li>
+            </ul>
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+
+
+
+    {% endblock %}

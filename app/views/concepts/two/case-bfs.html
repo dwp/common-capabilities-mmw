@@ -1,0 +1,112 @@
+{% extends "layouts/mmw-concept-1.html" %}
+
+{% set pageName="Case tasks" %}
+{% from "horizontal-navigation/macro.njk" import dwpHorizontalNavigation %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+    <div class="moj-page-header-actions">
+      <div class="moj-page-header-actions__title">
+        <span class="govuk-caption-m">Initial claim</span>
+        <h1 class="govuk-heading-l">Case 88888888888</h1>
+        <span class="govuk-caption-m govuk-!-static-margin-bottom-2">Jane Doe QQ 12 34 56 X</span>
+        <strong class="govuk-tag govuk-tag--green">
+          Active
+        </strong>
+      </div>
+      <div class="moj-page-header-actions__actions">
+        <div class="moj-button-group moj-button-group--inline">
+
+          <a href="transfer-case" class="govuk-button govuk-button--secondary">
+            Transfer case
+          </a>
+          <a href="close-case" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Close case
+          </a>
+        </div>
+      </div>
+    </div>
+    {{
+    dwpHorizontalNavigation({
+    selectedItem: "case-bfs",
+    items: [
+    {
+    text: "Details",
+    href: "case-details-v2",
+    id: "s-item-1"
+    },
+    {
+    text: "Tasks",
+    href: "case-tasks",
+    id: "s-item-2"
+    },
+    {
+    text: "Notes",
+    href: "case-notes",
+    id: "s-item-3"
+    },
+    {
+    text: "BFs",
+    href: "case-bfs",
+    id: "s-item-4"
+    },
+    {
+    text: "Documents",
+    href: "case-documents",
+    id: "s-item-5"
+    }
+    ]
+    })
+    }}
+
+    <div class=" govuk-!-static-margin-top-6">
+      <div class="moj-page-header-actions">
+        <div class="moj-page-header-actions__title">
+          <h2 class="govuk-heading-l">BFs</h2>
+        </div>
+        <div class="moj-page-header-actions__actions">
+          <div class="moj-button-group moj-button-group--inline">
+            <a href="create-bf" class="govuk-button govuk-button--secondary" data-module="govuk-button"
+              data-govuk-button-init="">
+              Set new BF
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="case-section-container">
+        <table class="govuk-table">
+          <!-- <caption hidden="hidden" id="account-interests-table" class="visible-hidden govuk-table__caption"> Case: 222222222 tasks
+    </caption> -->
+          <thead class="govuk-table__head">
+            <tr role="row" class="govuk-table__row">
+              <th scope="col" role="columnheader" class="govuk-table__header current-start-col">Expires</th>
+              <th scope="col" role="columnheader" class="govuk-table__header current-start-col">Reason</th>
+              <td aria-hidden="true" class="govuk-table__header current-third-col"></td>
+            </tr>
+          </thead>
+
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell current-start-cell"> 12th May 2026
+              </td>
+              <td class="govuk-table__cell current-start-cell"> Information required
+              </td>
+              <td class="govuk-table__cell current-third-cell">
+                <a _ngcontent-ng-c311355542="" href="bf-details" style="float: right;">View details</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+
+
+    {% endblock %}
