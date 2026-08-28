@@ -1,0 +1,86 @@
+{% extends "layouts/mmw-1.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <!-- 
+    {% include "govuk-prototype-kit/includes/homepage-top.njk" %} -->
+
+    <h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>
+    <ul
+      class="govuk-prototype-kit-manage-prototype-task-list__items govuk-prototype-kit-manage-prototype-task-list__items">
+
+      <li class="govuk-prototype-kit-manage-prototype-task-list__item">
+        <span class="govuk-prototype-kit-manage-prototype-task-list__task-name">
+          Change the service name in the file <strong>app/config.json</strong>
+        </span>
+        <strong
+          class="govuk-tag govuk-prototype-kit-manage-prototype-govuk-tag govuk-prototype-kit-manage-prototype-task-list__tag">
+          Done
+        </strong>
+      </li>
+
+      <li class="govuk-prototype-kit-manage-prototype-task-list__item">
+        <span class="govuk-prototype-kit-manage-prototype-task-list__task-name">
+          Edit the homepage in the file <strong>app/views/index.html</strong>
+        </span>
+        <strong
+          class="govuk-tag govuk-prototype-kit-manage-prototype-govuk-tag govuk-prototype-kit-manage-prototype-task-list__tag">
+          Done
+        </strong>
+      </li>
+
+    </ul>
+    <p>new content</p>
+    test
+    <!-- {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %} -->
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <h2>test worked</h2>
+    <ul class="x-govuk-sub-navigation__section">
+      <li class="x-govuk-sub-navigation__section-item">
+        <a class="x-govuk-sub-navigation__link" href="/components/attachment/">Attachment</a>
+      </li>
+      <li class="x-govuk-sub-navigation__section-item">
+        <a class="x-govuk-sub-navigation__link" href="/components/breadcrumbs/">Breadcrumbs</a>
+      </li>
+      <li class="x-govuk-sub-navigation__section-item">
+        <a class="x-govuk-sub-navigation__link" href="/components/content-list/">Contents list</a>
+      </li>
+      <li class="x-govuk-sub-navigation__section-item">
+        <a class="x-govuk-sub-navigation__link" href="/components/emergency-banner/">Emergency banner</a>
+      </li>
+      <li class="x-govuk-sub-navigation__section-item">
+        <a class="x-govuk-sub-navigation__link" href="/components/feedback/">Feedback</a>
+      </li>
+      <li class="x-govuk-sub-navigation__section-item">
+        <a class="x-govuk-sub-navigation__link" href="/components/global-banner/">Global banner</a>
+      </li>
+      <li class="x-govuk-sub-navigation__section-item">
+        <a class="x-govuk-sub-navigation__link" href="/components/previous-and-next-navigation/">Previous and next
+          navigation</a>
+      </li>
+      <li class="x-govuk-sub-navigation__section-item">
+        <a class="x-govuk-sub-navigation__link" href="/components/print-link/">Print link</a>
+      </li>
+      <li class="x-govuk-sub-navigation__section-item x-govuk-sub-navigation__section-item--current">
+        <a class="x-govuk-sub-navigation__link" href="/components/related-navigation/" aria-current="true">Related
+          Navigation</a>
+      </li>
+      <li class="x-govuk-sub-navigation__section-item">
+        <a class="x-govuk-sub-navigation__link" href="/components/search-autocomplete/">Search autocomplete</a>
+      </li>
+      <li class="x-govuk-sub-navigation__section-item">
+        <a class="x-govuk-sub-navigation__link" href="/components/single-page-notification-button/">Single page
+          notification button</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+{% endblock %}

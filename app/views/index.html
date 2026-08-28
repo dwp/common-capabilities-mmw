@@ -1,18 +1,49 @@
-{% extends "layouts/main.html" %}
-
+{% extends "layouts/main-side-nav.html" %}
+{% from "side-navigation/macro.njk" import dwpSideNavigation %}
+{% include "govuk-prototype-kit/includes/homepage-top.njk" %}
 {% set pageName="Home" %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-one-quarter">
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
 
+    {{
+    dwpSideNavigation({
+    pageId: "side-navigation-2",
+    selectedItem: "index",
+    items: [
+    {
+    text: "MVP",
+    href: "index",
+    id: "mvp"
+    },
+    {
+    text: "Concepting",
+    href: "concepting",
+    id: "concepting"
+    },
+    {
+    text: "Belfast co design",
+    href: "belfast",
+    id: "belfast"
+    },
+    {
+    text: "Provoke-a-types",
+    href: "provoke-a-types",
+    id: "provoke-a-types"
+    }
+    ]
+    })
+    }}
+
+
+  </div>
+  <div class="govuk-grid-column-three-quarters">
     <h1 class="govuk-heading-xl">
       {{ serviceName }}
     </h1>
-test
     {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
   </div>
   <h2>test worked</h2>

@@ -1,0 +1,68 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+{% block header %}
+
+{{ govukHeader() }}
+{{ govukServiceNavigation({
+serviceName: serviceName
+})}}
+
+{% endblock %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+
+
+        {{ mojSideNavigation({
+        label: "Side navigation",
+        items: [{
+        text: "MVP",
+        href: "#1",
+        active: true
+        }, {
+        text: "Belfast co design",
+        href: "#2"
+        }, {
+        text: "Provoke a types",
+        href: "#3"
+        }]
+        }) }}
+
+
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+        <h1 class="govuk-heading-xl">
+            {{ serviceName }}
+        </h1>
+        {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+    </div>
+    <h2>test worked</h2>
+</div>
+{% block footer %}
+{{
+dwpFooter({
+meta: {
+visuallyHiddenTitle: "About this website",
+items: [
+{
+href: "",
+text: "Accessibility statement"
+},
+{
+href: "",
+text: "Privacy"
+},
+{
+href: "/manage-prototype/clear-data",
+text: "Clear data"
+}
+]
+}
+})
+}}
+{% endblock %}
