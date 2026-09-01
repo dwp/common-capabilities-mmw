@@ -5,109 +5,111 @@
 {% block content %}
 
 <div class="govuk-grid-row ">
- 
+
   <div class="govuk-grid-column-full">
-  
 
- 
-<div class="">
-  
-  <div class="govuk-grid-row">
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-          <h1 class="govuk-fieldset__heading">
-            Close case
-          </h1>
-        </legend>
-        <div class="govuk-!-width-two-thirds">
-          <dl class="govuk-summary-list">
-            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
-              <dt class="govuk-summary-list__key">
-                Customer
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Jane Doe
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
-              <dt class="govuk-summary-list__key">
-                Case type
-              </dt>
-              <dd class="govuk-summary-list__value">
-                initial Claim
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
-              <dt class="govuk-summary-list__key">
-                Created
-              </dt>
-              <dd class="govuk-summary-list__value">
-                12 Mar 2026
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Due
-              </dt>
-              <dd class="govuk-summary-list__value">
-                30 Mar 2026
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Status
-              </dt>
-              <dd class="govuk-summary-list__value">
-                <span class="govuk-tag govuk-tag--yellow">Active</span>
-              </dd>
-            </div>
-          
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Case owner
-              </dt>
-              <dd class="govuk-summary-list__value">
-                <p class="govuk-body">8899645321</p>
-                <p class="govuk-body">agent.email@example.com</p>
-              </dd>
-            </div>
-          </dl>
-        </div>
-        
-        <h2 class="govuk-heading-m">Are you sure you want to close this case</h2>
-        <p>Understanding what happens when a case is closed</p>
-        <div class="govuk-radios" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="Decision Makers">
-            <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-              Yes
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="Maintenance">
-            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-              No
-            </label>
-          </div>
-          
-        </div>
-        <div class="govuk-warning-text">
-          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-          <strong class="govuk-warning-text__text">
-            <span class="govuk-visually-hidden">Warning</span>
-            You can be fined up to £5,000 if you do not register.
-          </strong>
-        </div>
-      </fieldset>
-    </div>
+
+
     <div class="">
-      <a href="case-closed" class="govuk-button " data-module="govuk-button" data-govuk-button-init="">
-        Continue
-      </a>
-    </div>
-  </div>
-</div>
- 
 
-{% endblock %}
+      <div class="govuk-grid-row">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Close case
+              </h1>
+            </legend>
+            <div class="govuk-!-width-two-thirds">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+                  <dt class="govuk-summary-list__key">
+                    Customer
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Jane Doe
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+                  <dt class="govuk-summary-list__key">
+                    Case type
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    initial Claim
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+                  <dt class="govuk-summary-list__key">
+                    Created
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    12 Mar 2026
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Due
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    30 Mar 2026
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Status
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <span class="govuk-tag govuk-tag--yellow">Active</span>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Case owner
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">8899645321</p>
+                    <p class="govuk-body">agent.email@example.com</p>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            <h2 class="govuk-heading-m">Are you sure you want to close this case</h2>
+            <p>Understanding what happens when a case is closed</p>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio"
+                  value="Decision Makers">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio"
+                  value="Maintenance">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                  No
+                </label>
+              </div>
+
+            </div>
+            <!-- <div class="govuk-warning-text">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-visually-hidden">Warning</span>
+                Closing this case will make this case unavailable to you
+              </strong>
+            </div> -->
+          </fieldset>
+        </div>
+        <div class="">
+          <a href="case-closed" class="govuk-button " data-module="govuk-button" data-govuk-button-init="">
+            Continue
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    {% endblock %}
