@@ -1,0 +1,33 @@
+{% extends "layouts/mmw-concept-1-blank.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row ">
+ 
+  <div class="govuk-grid-column-full">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="event-name">
+            Find a case
+          </label>
+        </h1>
+        <div id="search-hint" class="govuk-hint moj-search__hint ">
+          You can search by name, date of birth or National Insurance number
+        </div>
+        <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="twoThirds" type="text">
+        <a href="find-a-case-results" class="govuk-button" >
+          Search
+        </a>
+      </div>
+      </div>
+      </div>
+ 
+
+
+
+ 
+
+{% endblock %}

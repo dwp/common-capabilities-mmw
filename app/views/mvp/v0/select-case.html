@@ -1,0 +1,57 @@
+{% extends "layouts/mmw-concept-1.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row ">
+ 
+  <div class="govuk-grid-column-full">
+  
+
+ 
+<div class="">
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Select a case to set a BF against
+          </h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="QQ 12 34 56 A">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+              QQ 12 34 56 A
+            </label>
+            <div class="govuk-hint govuk-radios__hint">Claim</div>
+          </div>
+          
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="QQ 23 55 78 B">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+              QQ 23 55 78 B
+            </label>
+            <div class="govuk-hint govuk-radios__hint">Secondary claim</div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="govuk-inset-text">
+      If the case you want to set a BF against is not in this this list you must first you must add it to you list of cases.
+    </div>
+    <div class="">
+      <a href="case-details" class="govuk-button " data-module="govuk-button" data-govuk-button-init="">
+        Continue
+      </a>
+      <a href="case-details" class="govuk-button govuk-button--secondary" data-module="govuk-button" data-govuk-button-init="">
+        Cancel
+      </a>
+    </div>
+  </div>
+</div>
+ 
+
+{% endblock %}

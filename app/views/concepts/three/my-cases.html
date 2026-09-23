@@ -1,0 +1,85 @@
+{% extends "layouts/mmw-concept-1-blank.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+ 
+  <div class="govuk-grid-column-full">
+  
+    <h1 class="govuk-heading-l">My Cases</h1>
+
+
+<div class="case-section-container">
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-0"><a href="case-details">QQ 66 75 34D</a><br>Dwayne</h2>
+      <p class="govuk-!-static-margin-bottom-0">Jane Doe</p>
+      <span class="govuk-hint ">Date of claim: 12 Jan 2026</span><br>
+      <span class="govuk-hint ">Case type: new claim</span><br>
+      <span class="govuk-hint ">Claim</span>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <table class="govuk-table govuk-!-static-margin-bottom-1">
+        <caption class="govuk-table__caption govuk-table__caption--s">Recent tasks</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Task type</th>
+            <th scope="col" class="govuk-table__header">Status</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell">Initial claim</td>
+            <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Completed</span></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell">Change of circumstances</td>
+            <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Active</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-body"><a href="case-details">View all</a></p>
+    </div>
+  </div>
+  </div>
+  <div class="case-section-container">
+  
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-m govuk-!-static-margin-bottom-0"><a href="case-details">QQ 11 25 33 D</a></h2>
+        <p class="govuk-!-static-margin-bottom-0">Clarence Dean</p>
+        <span class="govuk-hint ">Claim</span>
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <table class="govuk-table govuk-!-static-margin-bottom-1">
+          <caption class="govuk-table__caption govuk-table__caption--s">Recent tasks</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Task</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Claim</th>
+              <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Completed</span></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Change</th>
+              <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Active</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="govuk-body"><a href="case-details">View all</a></p>
+      </div>
+    </div>
+    </div>
+  
+  
+</div>
+ 
+
+{% endblock %}

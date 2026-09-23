@@ -1,0 +1,91 @@
+{% extends "layouts/mmw-concept-1.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row ">
+ 
+  <div class="govuk-grid-column-full">
+  
+
+ 
+<div class="">
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Case closed
+          </h1>
+        </legend>
+        <div class="govuk-!-width-two-thirds">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+              <dt class="govuk-summary-list__key">
+                Customer
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Jane Doe
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+              <dt class="govuk-summary-list__key">
+                Case type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                initial Claim
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+              <dt class="govuk-summary-list__key">
+                Created
+              </dt>
+              <dd class="govuk-summary-list__value">
+                12 Mar 2026
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Due
+              </dt>
+              <dd class="govuk-summary-list__value">
+                30 Mar 2026
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Status
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <span class="govuk-tag govuk-tag--grey">Closed</span>
+              </dd>
+            </div>
+          
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Case owner
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">8899645321</p>
+                <p class="govuk-body">agent.email@example.com</p>
+              </dd>
+            </div>
+          </dl>
+        </div>
+        
+        <h2 class="govuk-heading-m">Are you sure you want to close this case</h2>
+        
+     
+        
+    <div class="">
+      <a href="case-details" class="govuk-link " data-module="govuk-button" data-govuk-button-init="">
+        Return to my case list
+      </a>
+    </div>
+  </div>
+</div>
+ 
+
+{% endblock %}

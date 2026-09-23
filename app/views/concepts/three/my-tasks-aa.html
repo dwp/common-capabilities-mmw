@@ -1,0 +1,556 @@
+{% extends "layouts/mmw-concept-1-blank.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-l">My tasks aa</h1>
+  <div class="govuk-main-wrapper " id="main-content" role="main">
+
+    <form class="form" action="/tasks-ui/agent/my-tasks" method="get" role="form">
+      <div class="govuk-button-group" data-testid="button-group-id">
+        <button class="govuk-button govuk-button--primary" type="submit" value="Claim" data-module="govuk-button">Claim
+          new task</button>
+      </div>
+    </form>
+    <div class="govuk-grid-row " data-testid="grid-row">
+      <div data-testid="column-two-thirds" class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group" data-testid="form-group-id">
+          <label class="govuk-label" for="input-filter">Filter your tasks</label>
+          <input class="govuk-input govuk-input--width-10" id="input-filter" name="inputFilter" type="text" value="">
+          <button class="govuk-button govuk-button--secondary" type="submit" value="Filter"
+            data-module="govuk-button">Filter</button>
+        </div>
+      </div>
+      <div data-testid="column-one-third" class="govuk-grid-column-one-third">
+        <div class="tasks-sort-inner">
+          <div class="govuk-form-group" data-testid="form-group-id">
+            <label class="govuk-label" for="sort">Sort by</label>
+            <select class="govuk-select" id="sort" name="sort" data-testid="select-component">
+              <option data-testid="sort-option" value="claimedNewestToOldest">Claimed, newest to oldest</option>
+              <option data-testid="sort-option" value="claimedOldestToNewest">Claimed, oldest to newest</option>
+              <option data-testid="sort-option" value="dueDateSoonestToLatest">Due, soonest to latest</option>
+              <option data-testid="sort-option" value="dueDateLatestToSoonest">Due, latest to soonest</option>
+              <option data-testid="sort-option" value="createdNewestToOldest">Created, newest to oldest</option>
+              <option data-testid="sort-option" value="createdOldestToNewest">Created, oldest to newest</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="govuk-grid-row" data-testid="grid-row">
+      <div data-testid="column-full" class="govuk-grid-column-full">
+        <table class="govuk-table view-tasks-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Tasks</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header ">Details</th>
+              <th scope="col" class="govuk-table__header ">
+                <span class="govuk-visually-hidden">Date created</span>
+                <span aria-hidden="true">Created</span>
+              </th>
+              <th scope="col" class="govuk-table__header ">Task</th>
+              <th scope="col" class="govuk-table__header table-cell-fixed-width">
+                <span class="govuk-visually-hidden">National Insurance Number</span>
+                <span aria-hidden="true">National Insurance<br>number</span>
+              </th>
+              <th scope="col" class="govuk-table__header ">
+                <span class="govuk-visually-hidden">Date due</span>
+                <span aria-hidden="true">Due</span>
+              </th>
+              <th scope="col" class="govuk-table__header ">
+                Status
+              </th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell " data-testid="table-cell">
+                <a class="govuk-link" href="task-details">Action<span class="govuk-visually-hidden"> Issue Benefits
+                    Amount 04 for Not applicable.</span></a>
+              </td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">28 May
+                  2026</span><span aria-hidden="true">28 May2026</span>
+              </td>
+              <td class="govuk-table__cell " data-testid="table-cell">Issue Benefits Amount 04
+
+              </td>
+              <td class="govuk-table__cell " data-testid="table-cell">QQ 12 34 56 A</td>
+              <td class="govuk-table__cell " data-testid="table-cell">
+                <span class="govuk-visually-hidden">12 June 2026 at 00:09</span><span aria-hidden="true">12 Jun 2026 at
+                  00:09</span>
+              </td>
+              <td class="govuk-table__cell " data-testid="table-cell"><strong role="status"
+                  class="govuk-tag govuk-tag--yellow govuk-!-font-weight-bold">ALLOCATED</strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell " data-testid="table-cell">
+                <a class="govuk-link" href="task-details">Action
+                  <span class="govuk-visually-hidden"> Issue Benefits Amount 04 for Not applicable.</span>
+                </a>
+              </td>
+              <td class="govuk-table__cell " data-testid="table-cell">
+                <span class="govuk-visually-hidden">21 April 2026</span>
+                <span aria-hidden="true">28 May 2026</span>
+              </td>
+              <td class="govuk-table__cell " data-testid="table-cell">Claim</td>
+              <td class="govuk-table__cell " data-testid="table-cell">QQ 23 55 78 B</td>
+              <td class="govuk-table__cell " data-testid="table-cell">
+                <span class="govuk-visually-hidden">12 Jun 2026 at 01:01</span><span aria-hidden="true">12 Jun 2026 at
+                  01:01</span>
+              </td>
+              <td class="govuk-table__cell " data-testid="table-cell"><strong role="status"
+                  class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link"
+                  href="task-2-details-a1">Action<span class="govuk-visually-hidden"> Claim.</span></a></td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February
+                  2026</span><span aria-hidden="true">19 May 2026</span></td>
+              <td class="govuk-table__cell " data-testid="table-cell">Claim</td>
+              <td class="govuk-table__cell " data-testid="table-cell">QQ 34 56 78 C</td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">1 June 2027 at
+                  09:08</span><span aria-hidden="true">10 Jun 2026 at 09:08</span></td>
+              <td class="govuk-table__cell " data-testid="table-cell"><strong role="status"
+                  class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link"
+                  href="task-2-details-a2">Action<span class="govuk-visually-hidden"> Change.</span></a></td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February
+                  2026</span><span aria-hidden="true">18 May 2026</span></td>
+              <td class="govuk-table__cell " data-testid="table-cell">Change</td>
+              <td class="govuk-table__cell " data-testid="table-cell">QQ 23 55 78 B</td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">9 February
+                  2027 at 09:07</span><span aria-hidden="true">9 Jun 2026 at 09:07</span></td>
+              <td class="govuk-table__cell " data-testid="table-cell"><strong role="status"
+                  class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link"
+                  href="task-2-details-a3">Action<span class="govuk-visually-hidden">Mandatory
+                    Reconsideration.</span></a></td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">16 February
+                  2026</span><span aria-hidden="true">16 May 2026</span></td>
+              <td class="govuk-table__cell " data-testid="table-cell">Mandatory Reconsideration</td>
+              <td class="govuk-table__cell " data-testid="table-cell">QQ 34 56 78 C</td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span><strong
+                    class="govuk-tag govuk-tag--red govuk-!-font-weight-bold">OVERDUE</strong></span><br><span
+                  class="govuk-visually-hidden">25 May 2026 at 22:39</span><span aria-hidden="true">16 Feb 2026 at
+                  22:39</span></td>
+              <td class="govuk-table__cell " data-testid="table-cell"><strong role="status"
+                  class="govuk-tag govuk-tag--grey govuk-!-font-weight-bold">Unallocated</strong></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link"
+                  href="task-details-b-2">Action<span class="govuk-visually-hidden"> Eligible Employment Status Wales
+                    for Not applicable.</span></a></td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">16 February
+                  2026</span><span aria-hidden="true">16 May 2026</span></td>
+              <td class="govuk-table__cell " data-testid="table-cell">Change</td>
+              <td class="govuk-table__cell " data-testid="table-cell">QQ 11 25 33 D</td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span><strong
+                    class="govuk-tag govuk-tag--red govuk-!-font-weight-bold">OVERDUE</strong></span><br><span
+                  class="govuk-visually-hidden">25 May 2026 at 22:37</span><span aria-hidden="true">16 Feb 2026 at
+                  22:37</span></td>
+              <td class="govuk-table__cell " data-testid="table-cell"><strong role="status"
+                  class="govuk-tag govuk-tag--grey govuk-!-font-weight-bold">Unallocated</strong></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link"
+                  href="task-details-b-3">Action<span class="govuk-visually-hidden"> MR request</span></a></td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">16 February
+                  2026</span><span aria-hidden="true">16 Feb 2026</span></td>
+              <td class="govuk-table__cell " data-testid="table-cell">MR request</td>
+              <td class="govuk-table__cell " data-testid="table-cell">QQ 11 25 33 D</td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span><strong
+                    class="govuk-tag govuk-tag--red govuk-!-font-weight-bold">OVERDUE</strong></span><br><span
+                  class="govuk-visually-hidden">16 February 2026 at 22:37</span><span aria-hidden="true">16 Feb 2026 at
+                  22:37</span></td>
+              <td class="govuk-table__cell " data-testid="table-cell"><strong role="status"
+                  class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong></td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link"
+                  href="task-details-b-3">Action<span class="govuk-visually-hidden"> MR request</span></a></td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">16 February
+                  2026</span><span aria-hidden="true">16 Feb 2026</span></td>
+              <td class="govuk-table__cell " data-testid="table-cell">MR request</td>
+              <td class="govuk-table__cell " data-testid="table-cell">QQ 11 25 33 D</td>
+              <td class="govuk-table__cell " data-testid="table-cell"><span><strong
+                    class="govuk-tag govuk-tag--red govuk-!-font-weight-bold">OVERDUE</strong></span><br><span
+                  class="govuk-visually-hidden">16 February 2026 at 22:37</span><span aria-hidden="true">16 Feb 2026 at
+                  22:37</span></td>
+              <td class="govuk-table__cell " data-testid="table-cell"><strong role="status"
+                  class="govuk-tag govuk-tag--green govuk-!-font-weight-bold">ACTIVE</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <h2>scroll</h2>
+      <div class="moj-scrollable-pane" role="region" aria-label="Historic rainfall in June" tabindex="0">
+        <table class="govuk-table">
+          <caption class="govuk-table__caption">Historic rainfall in June</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Station</th>
+              <th scope="col" class="govuk-table__header">2022</th>
+              <th scope="col" class="govuk-table__header">2021</th>
+              <th scope="col" class="govuk-table__header">2020</th>
+              <th scope="col" class="govuk-table__header">2019</th>
+              <th scope="col" class="govuk-table__header">2018</th>
+              <th scope="col" class="govuk-table__header">2017</th>
+              <th scope="col" class="govuk-table__header">2016</th>
+              <th scope="col" class="govuk-table__header">2015</th>
+              <th scope="col" class="govuk-table__header">2014</th>
+              <th scope="col" class="govuk-table__header">2013</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Lerwick</td>
+              <td class="govuk-table__cell">13.7mm</td>
+              <td class="govuk-table__cell">13.8mm</td>
+              <td class="govuk-table__cell">13.9mm</td>
+              <td class="govuk-table__cell">12.7mm</td>
+              <td class="govuk-table__cell">13.3mm</td>
+              <td class="govuk-table__cell">13.3mm</td>
+              <td class="govuk-table__cell">12.9mm</td>
+              <td class="govuk-table__cell">11.2mm</td>
+              <td class="govuk-table__cell">13.3mm</td>
+              <td class="govuk-table__cell">12.7mm</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Eskdalemuir</td>
+              <td class="govuk-table__cell">17.0mm</td>
+              <td class="govuk-table__cell">17.9mm</td>
+              <td class="govuk-table__cell">17.2mm</td>
+              <td class="govuk-table__cell">16.2mm</td>
+              <td class="govuk-table__cell">19.7mm</td>
+              <td class="govuk-table__cell">16.4mm</td>
+              <td class="govuk-table__cell">17.6mm</td>
+              <td class="govuk-table__cell">15.7mm</td>
+              <td class="govuk-table__cell">17.8mm</td>
+              <td class="govuk-table__cell">16.9mm</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Valley</td>
+              <td class="govuk-table__cell">17.5mm</td>
+              <td class="govuk-table__cell">17.4mm</td>
+              <td class="govuk-table__cell">17.9mm</td>
+              <td class="govuk-table__cell">17.1mm</td>
+              <td class="govuk-table__cell">20.2mm</td>
+              <td class="govuk-table__cell">17.6mm</td>
+              <td class="govuk-table__cell">18.0mm</td>
+              <td class="govuk-table__cell">16.6mm</td>
+              <td class="govuk-table__cell">18.0mm</td>
+              <td class="govuk-table__cell">17.5mm</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Heathrow</td>
+              <td class="govuk-table__cell">23.2mm</td>
+              <td class="govuk-table__cell">22.5mm</td>
+              <td class="govuk-table__cell">22.5mm</td>
+              <td class="govuk-table__cell">21.8mm</td>
+              <td class="govuk-table__cell">24.2mm</td>
+              <td class="govuk-table__cell">24.0mm</td>
+              <td class="govuk-table__cell">20.7mm</td>
+              <td class="govuk-table__cell">22.2mm</td>
+              <td class="govuk-table__cell">22.1mm</td>
+              <td class="govuk-table__cell">20.3mm</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Hurn</td>
+              <td class="govuk-table__cell">21.0mm</td>
+              <td class="govuk-table__cell">20.7mm</td>
+              <td class="govuk-table__cell">20.7mm</td>
+              <td class="govuk-table__cell">19.9mm</td>
+              <td class="govuk-table__cell">22.9mm</td>
+              <td class="govuk-table__cell">21.9mm</td>
+              <td class="govuk-table__cell">19.6mm</td>
+              <td class="govuk-table__cell">20.5mm</td>
+              <td class="govuk-table__cell">21.1mm</td>
+              <td class="govuk-table__cell">19.6mm</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Camborne</td>
+              <td class="govuk-table__cell">17.9mm</td>
+              <td class="govuk-table__cell">17.4mm</td>
+              <td class="govuk-table__cell">17.1mm</td>
+              <td class="govuk-table__cell">16.5mm</td>
+              <td class="govuk-table__cell">19.7mm</td>
+              <td class="govuk-table__cell">18.0mm</td>
+              <td class="govuk-table__cell">17.0mm</td>
+              <td class="govuk-table__cell">16.8mm</td>
+              <td class="govuk-table__cell">17.8mm</td>
+              <td class="govuk-table__cell">15.9mm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      {%- from "govuk/components/table/macro.njk" import govukTable -%}
+
+      <div class="moj-scrollable-pane govuk-grid-column-one-third" role="region" aria-label="Historic rainfall in June"
+        tabindex="0">
+        {{ govukTable({
+        caption: "Historic rainfall in June",
+        head: [
+        {
+        text: "Station"
+        },
+        {
+        text: "2022"
+        },
+        {
+        text: "2021"
+        },
+        {
+        text: "2020"
+        },
+        {
+        text: "2019"
+        },
+        {
+        text: "2018"
+        },
+        {
+        text: "2017"
+        },
+        {
+        text: "2016"
+        },
+        {
+        text: "2015"
+        },
+        {
+        text: "2014"
+        },
+        {
+        text: "2013"
+        }
+        ],
+        rows: [
+        [
+        {
+        text: "Lerwick"
+        },
+        {
+        text: "13.7mm"
+        },
+        {
+        text: "13.8mm"
+        },
+        {
+        text: "13.9mm"
+        },
+        {
+        text: "12.7mm"
+        },
+        {
+        text: "13.3mm"
+        },
+        {
+        text: "13.3mm"
+        },
+        {
+        text: "12.9mm"
+        },
+        {
+        text: "11.2mm"
+        },
+        {
+        text: "13.3mm"
+        },
+        {
+        text: "12.7mm"
+        }
+        ],
+        [
+        {
+        text: "Eskdalemuir"
+        },
+        {
+        text: "17.0mm"
+        },
+        {
+        text: "17.9mm"
+        },
+        {
+        text: "17.2mm"
+        },
+        {
+        text: "16.2mm"
+        },
+        {
+        text: "19.7mm"
+        },
+        {
+        text: "16.4mm"
+        },
+        {
+        text: "17.6mm"
+        },
+        {
+        text: "15.7mm"
+        },
+        {
+        text: "17.8mm"
+        },
+        {
+        text: "16.9mm"
+        }
+        ],
+        [
+        {
+        text: "Valley"
+        },
+        {
+        text: "17.5mm"
+        },
+        {
+        text: "17.4mm"
+        },
+        {
+        text: "17.9mm"
+        },
+        {
+        text: "17.1mm"
+        },
+        {
+        text: "20.2mm"
+        },
+        {
+        text: "17.6mm"
+        },
+        {
+        text: "18.0mm"
+        },
+        {
+        text: "16.6mm"
+        },
+        {
+        text: "18.0mm"
+        },
+        {
+        text: "17.5mm"
+        }
+        ],
+        [
+        {
+        text: "Heathrow"
+        },
+        {
+        text: "23.2mm"
+        },
+        {
+        text: "22.5mm"
+        },
+        {
+        text: "22.5mm"
+        },
+        {
+        text: "21.8mm"
+        },
+        {
+        text: "24.2mm"
+        },
+        {
+        text: "24.0mm"
+        },
+        {
+        text: "20.7mm"
+        },
+        {
+        text: "22.2mm"
+        },
+        {
+        text: "22.1mm"
+        },
+        {
+        text: "20.3mm"
+        }
+        ],
+        [
+        {
+        text: "Hurn"
+        },
+        {
+        text: "21.0mm"
+        },
+        {
+        text: "20.7mm"
+        },
+        {
+        text: "20.7mm"
+        },
+        {
+        text: "19.9mm"
+        },
+        {
+        text: "22.9mm"
+        },
+        {
+        text: "21.9mm"
+        },
+        {
+        text: "19.6mm"
+        },
+        {
+        text: "20.5mm"
+        },
+        {
+        text: "21.1mm"
+        },
+        {
+        text: "19.6mm"
+        }
+        ],
+        [
+        {
+        text: "Camborne"
+        },
+        {
+        text: "17.9mm"
+        },
+        {
+        text: "17.4mm"
+        },
+        {
+        text: "17.1mm"
+        },
+        {
+        text: "16.5mm"
+        },
+        {
+        text: "19.7mm"
+        },
+        {
+        text: "18.0mm"
+        },
+        {
+        text: "17.0mm"
+        },
+        {
+        text: "16.8mm"
+        },
+        {
+        text: "17.8mm"
+        },
+        {
+        text: "15.9mm"
+        }
+        ]
+        ]
+        }) }}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
