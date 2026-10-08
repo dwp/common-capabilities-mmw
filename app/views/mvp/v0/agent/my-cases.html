@@ -1,85 +1,61 @@
-{% extends "layouts/mmw-concept-1-blank.html" %}
+{% extends "layouts/mmw-new-nav-agent.html" %}
 
 {% set pageName="Home" %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
- 
   <div class="govuk-grid-column-full">
-  
     <h1 class="govuk-heading-l">My Cases</h1>
-
-
-<div class="case-section-container">
-  
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-third">
-      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-0"><a href="case-details">QQ 66 75 34D</a><br>Dwayne</h2>
-      <p class="govuk-!-static-margin-bottom-0">Jane Doe</p>
-      <span class="govuk-hint ">Date of claim: 12 Jan 2026</span><br>
-      <span class="govuk-hint ">Case type: new claim</span><br>
-      <span class="govuk-hint ">Claim</span>
-    </div>
-    <div class="govuk-grid-column-two-thirds">
-      <table class="govuk-table govuk-!-static-margin-bottom-1">
-        <caption class="govuk-table__caption govuk-table__caption--s">Recent tasks</caption>
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Task type</th>
-            <th scope="col" class="govuk-table__header">Status</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td scope="row" class="govuk-table__cell">Initial claim</td>
-            <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Completed</span></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td scope="row" class="govuk-table__cell">Change of circumstances</td>
-            <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Active</span></td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="govuk-body"><a href="case-details">View all</a></p>
-    </div>
   </div>
-  </div>
-  <div class="case-section-container">
-  
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-third">
-        <h2 class="govuk-heading-m govuk-!-static-margin-bottom-0"><a href="case-details">QQ 11 25 33 D</a></h2>
-        <p class="govuk-!-static-margin-bottom-0">Clarence Dean</p>
-        <span class="govuk-hint ">Claim</span>
-      </div>
-      <div class="govuk-grid-column-two-thirds">
-        <table class="govuk-table govuk-!-static-margin-bottom-1">
-          <caption class="govuk-table__caption govuk-table__caption--s">Recent tasks</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Task</th>
-              <th scope="col" class="govuk-table__header">Status</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Claim</th>
-              <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Completed</span></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Change</th>
-              <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Active</span></td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="govuk-body"><a href="case-details">View all</a></p>
-      </div>
-    </div>
-    </div>
-  
-  
 </div>
- 
+<div class="govuk-grid-row ">
+  <div class="govuk-grid-column-full">
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m"> Case list </caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Customer</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none">Case Description</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none">Created on</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none">Date Due</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none">Team</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link" href="case-details-v2">QQ 12 34 56 A</a><br>Jane Doe</td>
+          <td class="govuk-table__cell" data-sort-value="6961">Initial claim</td>
+          <td class="govuk-table__cell">01 Mar 2026</td>
+          <td class="govuk-table__cell">01 Mar 2026</td>
+          <td class="govuk-table__cell">Decision makers</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link" href="case-details-2">QQ 23 55 78 B</a><br>James Ward
+          </td>
+          <td class="govuk-table__cell" data-sort-value="6961">Initial claim</td>
+          <td class="govuk-table__cell">01 Mar 2026</td>
+          <td class="govuk-table__cell">05 Mar 2026</td>
+          <td class="govuk-table__cell">Decision makers</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">QQ 34 56 78 C</a><br>Evan Willis</td>
+          <td class="govuk-table__cell" data-sort-value="6961">Appeal</td>
+          <td class="govuk-table__cell">01 Mar 2026</td>
+          <td class="govuk-table__cell">10 Mar 2026</td>
+          <td class="govuk-table__cell">Admin</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">QQ 11 22 33 D</a><br>Sandra Smith</td>
+          <td class="govuk-table__cell" data-sort-value="6961">Additional claim</td>
+          <td class="govuk-table__cell">01 Mar 2026</td>
+          <td class="govuk-table__cell">10 Mar 2026</td>
+          <td class="govuk-table__cell">Admin</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 
 {% endblock %}

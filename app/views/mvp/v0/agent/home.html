@@ -1,4 +1,4 @@
-{% extends "layouts/mmw-concept-2.html" %}
+{% extends "layouts/mmw-new-nav-agent.html" %}
 
 {% set pageName="Home" %}
 {% from "horizontal-navigation/macro.njk" import dwpHorizontalNavigation %}
@@ -8,134 +8,187 @@
 
 <div class="govuk-grid-row ">
 
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">
       My work
     </h1>
     <div class="govuk-!-padding-bottom-5">
-      <h2 class="govuk-heading-m">Overview</h2>
-      <p>This shows the number of cases that were created / received and closed in the last 24 hours. Click on View to
-        see more information.</p>
-      <div class="govuk-body panel blue">
-        <div class="count">23</div>
-        <div class="stat">My active cases</div>
-        <span><a href="">view</a></span>
-      </div>
-      <div class="govuk-body panel teal">
-        <div class="count">48</div>
-        <div class="stat">case closed in the last 28 days</div>
-        <!-- <span><a href="">view</a></span> -->
-      </div>
-    </div>
+      <div class="data-container">
+        <div class="numeric-data">
+          <span class="numeric-data__item govuk-heading-xl govuk-!-margin-bottom-0">7</span>
+          <p class="numeric-data__item govuk-body">Active cases</p>
+        </div>
 
-    <div>
+        <div class="numeric-data">
+          <span class="numeric-data__item govuk-heading-xl govuk-!-margin-bottom-0">4</span>
+          <p class="numeric-data__item govuk-body">BFs</p>
+        </div>
+
+        <div class="numeric-data">
+          <span class="numeric-data__item govuk-heading-xl govuk-!-margin-bottom-0">13</span>
+          <p class="numeric-data__item govuk-body">Active tasks</p>
+        </div>
+      </div>
+
       <table class="govuk-table view-tasks-table">
-        <caption class="govuk-table__caption govuk-table__caption--m">Upcomming BFs<span class="govuk-caption-m">BFs due
-            to expire in the next 14 days</span></caption>
+        <caption class="govuk-table__caption govuk-table__caption--m">Overview<span class="govuk-caption-m">BFs due
+            to expire in the next 7 days</span></caption>
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header ">Details</th>
+            <th scope="col" class="govuk-table__header ">Work type</th>
             <th scope="col" class="govuk-table__header ">
-              <span class="govuk-visually-hidden">Date created</span>
-              <span aria-hidden="true">Created</span>
+              <span class="govuk-visually-hidden">Count</span>
+              <span aria-hidden="true">Count</span>
             </th>
-            <th scope="col" class="govuk-table__header ">Description</th>
-            <th scope="col" class="govuk-table__header table-cell-fixed-width">
-              <span class="govuk-visually-hidden">National Insurance Number</span>
-              <span aria-hidden="true">National Insurance<br>number</span>
-            </th>
-            <th scope="col" class="govuk-table__header ">
-              <span class="govuk-visually-hidden">Date due</span>
-              <span aria-hidden="true">Due</span>
-            </th>
+            <th scope="col" class="govuk-table__header ">Action</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
+            <td class="govuk-table__cell " data-testid="table-cell">Cases</td>
+            <td class="govuk-table__cell " data-testid="table-cell">12</td>
             <td class="govuk-table__cell " data-testid="table-cell">
-              <a class="govuk-link" href="task-details">View
-                <span class="govuk-visually-hidden"> Issue Benefits Amount 04 for Not applicable.</span>
+              <a class="govuk-link" href="my-cases">View
+                <span class="govuk-visually-hidden"> view case list.</span>
               </a>
             </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell " data-testid="table-cell">Tasks</td>
+            <td class="govuk-table__cell " data-testid="table-cell">25</td>
             <td class="govuk-table__cell " data-testid="table-cell">
-              <span class="govuk-visually-hidden">21 April 2026</span>
-              <span aria-hidden="true">21 May 2026</span>
+              <a class="govuk-link" href="my-tasks">View
+                <span class="govuk-visually-hidden"> view task list.</span>
+              </a>
             </td>
-            <td class="govuk-table__cell " data-testid="table-cell">Continue processing</td>
-            <td class="govuk-table__cell " data-testid="table-cell">QQ 23 55 78 B</td>
-            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">22 April 2026
-                at 01:01</span><span aria-hidden="true">22 June 2026 at 01:01</span></td>
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link"
-                href="task-2-details-a1">View<span class="govuk-visually-hidden"> Claim.</span></a></td>
-            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February
-                2026</span><span aria-hidden="true">19 May 2026</span></td>
-            <td class="govuk-table__cell " data-testid="table-cell">Review</td>
-            <td class="govuk-table__cell " data-testid="table-cell">QQ 34 56 78 C</td>
-            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February
-                2027 at 09:08</span><span aria-hidden="true">19 June 2027 at 09:08</span></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link"
-                href="task-2-details-a2">View<span class="govuk-visually-hidden"> Change.</span></a></td>
-            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 May
-                2026</span><span aria-hidden="true">19 May 2026</span></td>
-            <td class="govuk-table__cell " data-testid="table-cell">To Do</td>
-            <td class="govuk-table__cell " data-testid="table-cell">QQ 34 56 78 C</td>
-            <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February
-                2027 at 09:07</span><span aria-hidden="true">19 May 2027 at
-                09:07</span></td>
+            <td class="govuk-table__cell " data-testid="table-cell">BFs</td>
+            <td class="govuk-table__cell " data-testid="table-cell">5</td>
+            <td class="govuk-table__cell " data-testid="table-cell">
+              <a class="govuk-link" href="my-bfs">View
+                <span class="govuk-visually-hidden"> view BF list.</span>
+              </a>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div>
-      <table class="govuk-table">
-        <caption class="govuk-table__caption govuk-table__caption--m"> My tracked cases <span
-            class="govuk-caption-m">Cases that you own that currently sit in other teams</span></caption>
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header" aria-sort="ascending">Customer</th>
-            <th scope="col" class="govuk-table__header" aria-sort="none">Case Description</th>
-            <th scope="col" class="govuk-table__header" aria-sort="none">Created on</th>
-            <th scope="col" class="govuk-table__header" aria-sort="none">Date Due</th>
-            <th scope="col" class="govuk-table__header" aria-sort="none">Team</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a class="govuk-link" href="case-details">QQ 12 34 56 A</a><br>Jane Doe</td>
-            <td class="govuk-table__cell" data-sort-value="6961">Initial claim</td>
-            <td class="govuk-table__cell">01 Mar 2026</td>
-            <td class="govuk-table__cell">01 Mar 2026</td>
-            <td class="govuk-table__cell">Decision makers</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a class="govuk-link" href="case-details-2">QQ 23 55 78 B</a><br>James Ward
-            </td>
-            <td class="govuk-table__cell" data-sort-value="6961">Initial claim</td>
-            <td class="govuk-table__cell">01 Mar 2026</td>
-            <td class="govuk-table__cell">05 Mar 2026</td>
-            <td class="govuk-table__cell">Decision makers</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href="">QQ 34 56 78 C</a><br>Evan Willis</td>
-            <td class="govuk-table__cell" data-sort-value="6961">Appeal</td>
-            <td class="govuk-table__cell">01 Mar 2026</td>
-            <td class="govuk-table__cell">10 Mar 2026</td>
-            <td class="govuk-table__cell">Admin</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href="">QQ 11 22 33 D</a><br>Sandra Smith</td>
-            <td class="govuk-table__cell" data-sort-value="6961">Additional claim</td>
-            <td class="govuk-table__cell">01 Mar 2026</td>
-            <td class="govuk-table__cell">10 Mar 2026</td>
-            <td class="govuk-table__cell">Admin</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  </div>
+</div>
+
+
+<div class="govuk-grid-row ">
+  <div class="govuk-grid-column-full">
+    <table class="govuk-table view-tasks-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Expiring BFs<span class="govuk-caption-m">BFs due
+          to expire in the next XX days</span></caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header ">Details</th>
+          <th scope="col" class="govuk-table__header ">
+            <span class="govuk-visually-hidden">Date created</span>
+            <span aria-hidden="true">Created</span>
+          </th>
+          <th scope="col" class="govuk-table__header ">Description</th>
+          <th scope="col" class="govuk-table__header table-cell-fixed-width">
+            <span class="govuk-visually-hidden">National Insurance Number</span>
+            <span aria-hidden="true">National Insurance<br>number</span>
+          </th>
+          <th scope="col" class="govuk-table__header ">
+            <span class="govuk-visually-hidden">Date due</span>
+            <span aria-hidden="true">Due</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell " data-testid="table-cell">
+            <a class="govuk-link" href="task-details">View
+              <span class="govuk-visually-hidden"> Issue Benefits Amount 04 for Not applicable.</span>
+            </a>
+          </td>
+          <td class="govuk-table__cell " data-testid="table-cell">
+            <span class="govuk-visually-hidden">21 April 2026</span>
+            <span aria-hidden="true">21 May 2026</span>
+          </td>
+          <td class="govuk-table__cell " data-testid="table-cell">Continue processing</td>
+          <td class="govuk-table__cell " data-testid="table-cell">QQ 23 55 78 B</td>
+          <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">22 April 2026
+              at 01:01</span><span aria-hidden="true">22 June 2026 at 01:01</span></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link"
+              href="task-2-details-a1">View<span class="govuk-visually-hidden"> Claim.</span></a></td>
+          <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February
+              2026</span><span aria-hidden="true">19 May 2026</span></td>
+          <td class="govuk-table__cell " data-testid="table-cell">Review</td>
+          <td class="govuk-table__cell " data-testid="table-cell">QQ 34 56 78 C</td>
+          <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February
+              2027 at 09:08</span><span aria-hidden="true">19 June 2027 at 09:08</span></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell " data-testid="table-cell"><a class="govuk-link"
+              href="task-2-details-a2">View<span class="govuk-visually-hidden"> Change.</span></a></td>
+          <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 May
+              2026</span><span aria-hidden="true">19 May 2026</span></td>
+          <td class="govuk-table__cell " data-testid="table-cell">To Do</td>
+          <td class="govuk-table__cell " data-testid="table-cell">QQ 34 56 78 C</td>
+          <td class="govuk-table__cell " data-testid="table-cell"><span class="govuk-visually-hidden">19 February
+              2027 at 09:07</span><span aria-hidden="true">19 May 2027 at
+              09:07</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div>
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m"> My tracked cases <span class="govuk-caption-m">Cases
+        that you own that currently sit in other teams</span></caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header" aria-sort="ascending">Customer</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Case Description</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Created on</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Date Due</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Team</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link" href="case-details">QQ 12 34 56 A</a><br>Jane Doe</td>
+        <td class="govuk-table__cell" data-sort-value="6961">Initial claim</td>
+        <td class="govuk-table__cell">01 Mar 2026</td>
+        <td class="govuk-table__cell">01 Mar 2026</td>
+        <td class="govuk-table__cell">Decision makers</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link" href="case-details-2">QQ 23 55 78 B</a><br>James Ward
+        </td>
+        <td class="govuk-table__cell" data-sort-value="6961">Initial claim</td>
+        <td class="govuk-table__cell">01 Mar 2026</td>
+        <td class="govuk-table__cell">05 Mar 2026</td>
+        <td class="govuk-table__cell">Decision makers</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="">QQ 34 56 78 C</a><br>Evan Willis</td>
+        <td class="govuk-table__cell" data-sort-value="6961">Appeal</td>
+        <td class="govuk-table__cell">01 Mar 2026</td>
+        <td class="govuk-table__cell">10 Mar 2026</td>
+        <td class="govuk-table__cell">Admin</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="">QQ 11 22 33 D</a><br>Sandra Smith</td>
+        <td class="govuk-table__cell" data-sort-value="6961">Additional claim</td>
+        <td class="govuk-table__cell">01 Mar 2026</td>
+        <td class="govuk-table__cell">10 Mar 2026</td>
+        <td class="govuk-table__cell">Admin</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
 
@@ -143,4 +196,4 @@
 
 
 
-    {% endblock %}
+{% endblock %}
